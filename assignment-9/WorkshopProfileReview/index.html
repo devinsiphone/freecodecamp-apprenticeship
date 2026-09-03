@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A workshop profile review page where attendees can view their registration details and update information that is still editable before an upcoming event.">
+    <title>Workshop Profile Review</title>
+</head>
+
+<body>
+    <header>
+        <h1>Workshop Profile Review</h1>
+    </header>
+    <main>
+        <p>
+            A workshop profile review page where attendees can view their registration details and update information
+            that is still editable before an upcoming event.
+        </p>
+        <form action="https://example.com/profile-review" method="get">
+            <p>
+                <label for="fullname">Full Name: </label>
+                <input required type="text" id="fullname" name="fullname" value="Jordan Parker" />
+            </p>
+            <p>
+                <label for="email">Email: </label>
+                <input readonly type="email" id="email" name="email" value="jordan@example.com" />
+            </p>
+            <p>
+                <label for="registrationid">Registration ID: </label>
+                <input disabled type="text" id="registrationid" name="registrationid" value="AWS-2026-1048" />
+            </p>
+            <p>
+                <label for="topic">Workshop Topic: </label>
+                <input required type="text" id="topic" name="topic" value="Semantic HTML" minlength="3"
+                    maxlength="40" />
+            </p>
+            <p>
+                <input type="submit" value="Save Profile">
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p>Atlanta Web Skills Conference — Learn. Build. Share.</p>
+        <p><a href="https://freecodecamp.org">freecodecamp.org</a></p>
+    </footer>
+</body>
+
+</html>

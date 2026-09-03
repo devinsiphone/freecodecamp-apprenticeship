@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Information and registration options for a community HTML accessibility workshop.">
+    <title>HTML Accessibility Workshop</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML Accessibility Workshop</h1>
+        <p>Practice building webpages that are easier for everyone to use.</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="workshop-topics-heading">
+            <h2 id="workshop-topics-heading">Workshop Topics</h2>
+
+            <ul>
+                <li>Semantic HTML</li>
+                <li>Accessible Forms</li>
+                <li>ARIA Basics</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="registration-heading">
+            <h2 id="registration-heading">Workshop Registration</h2>
+
+            <p>Registration is currently open for the September workshop.</p>
+
+            <button type="button" aria-label="registration help">?</button>
+
+            <form action="https://example.com/register" method="get">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <button type="submit">Register</button>
+
+            </form>
+        </section>
+
+        <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Information</h2>
+
+            <p>
+                Questions?
+                <a href="mailto:workshops@example.com">
+                    workshops@example.com
+                </a>
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>

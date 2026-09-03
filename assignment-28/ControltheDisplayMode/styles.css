@@ -1,0 +1,17 @@
+#inline-demo span {
+    display: inline;
+    width: 150px;
+    height: 75px;
+}
+
+#block-demo span {
+    display: block;
+    width: 150px;
+    height: 75px;
+}
+
+#inline-block-demo span {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+}

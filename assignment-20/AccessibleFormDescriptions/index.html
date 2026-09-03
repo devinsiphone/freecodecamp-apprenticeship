@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registration form for an accessible web development workshop.">
+    <title>Accessible Web Workshop Registration</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Accessible Web Workshop Registration</h1>
+        <p>Register for our upcoming introductory accessibility workshop.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Registration Form</h2>
+
+            <form action="https://example.com/register" method="get">
+
+                <p>
+                    <label for="username">Username</label>
+                </p>
+
+                <input type="text" id="username" name="username" aria-describedby="username-help" required>
+
+                <p id="username-help">
+                    Your username should contain between 5 and 20 characters.
+                </p>
+
+
+                <p>
+                    <label for="email">Email Address</label>
+                </p>
+
+                <input type="email" id="email" name="email" aria-describedby="email-help" required>
+
+                <p id="email-help">
+                    We will use this address only for workshop registration information.
+                </p>
+
+
+                <p>
+                    <label for="comments">Accessibility Questions</label>
+                </p>
+
+                <textarea id="comments" name="comments" aria-describedby="comments-help"></textarea>
+
+                <p id="comments-help">
+                    Tell us about any accessibility topics you would like the instructor to discuss.
+                </p>
+
+
+                <p>
+                    <button type="submit">Register</button>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

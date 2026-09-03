@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A post-workshop survey for Atlanta Web Skills Conference where attendees can share feedback, rate their experience, and suggest topics for future events.">
+    <title>Post-Workshop Survey</title>
+</head>
+
+<body>
+    <header>
+        <h1>Post-Workshop Survey</h1>
+    </header>
+    <main>
+        <p>Thank you for attending the workshop. Please provide feedback on your experience. Feedback helps organizers
+            improve future workshops.</p>
+
+        <form action="https://example.com/post-workshop-survey" method="POST">
+            <fieldset>
+                <legend>Attendee Information</legend>
+
+                <label for="fullname">Full Name: </label>
+                <input required type="text" id="fullname" name="fullname" placeholder="John Doe" />
+
+                <label for="email">Email Address: </label>
+                <input required type="email" id="email" name="email" placeholder="email@example.com" />
+
+                <label for="years">Years of Coding Experience: </label>
+                <input type="number" id="years" name="years" placeholder="2" min="0" max="50" />
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Was this your first Atlanta Web Skills Conference event?</legend>
+
+                <input required type="radio" id="yes-option" name="first-event" value="yes" />
+                <label for="yes-option">Yes</label>
+                <input required type="radio" id="no-option" name="first-event" value="no">
+                <label for="no-option">No</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Which sessions did you attend?</legend>
+
+                <input type="checkbox" id="html-foundations" name="sessions" value="HTML Foundations" />
+                <label for="html-foundations">HTML Foundations</label>
+
+                <input type="checkbox" id="semantic-html" name="sessions" value="Semantic HTML" />
+                <label for="semantic-html">Semantic HTML</label>
+
+                <input type="checkbox" id="html-forms" name="sessions" value="HTML Forms" />
+                <label for="html-forms">HTML Forms</label>
+
+                <input type="checkbox" id="accessibility-basics" name="sessions" value="Accessibility Basics" />
+                <label for="accessibility-basics">Accessibility Basics</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Workshop rating</legend>
+
+                <label for="rating">How would you rate the workshop?</label>
+                <select name="rating" id="rating">
+                    <option value="poor">Poor</option>
+                    <option value="fair">Fair</option>
+                    <option selected value="good">Good</option>
+                    <option value="very-good">Very Good</option>
+                    <option value="excellent">Excellent</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Future workshop</legend>
+
+                <label for="next-topic">Which topic should we teach next?</label>
+                <select name="next-topic" id="next-topic">
+                    <option value="css-fundamentals">CSS Fundamentals</option>
+                    <option value="flexbox">Flexbox</option>
+                    <option value="css-grid">CSS Grid</option>
+                    <option value="javascript-basics">Javascript Basics</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Additional feedback</legend>
+
+                <label for="comments">Additional comments or suggestions</label><br>
+                <textarea name="comments" id="comments" cols="50" rows="10"></textarea>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit Survey" />
+        </form>
+        <br>
+    </main>
+    <footer>
+        Atlanta Web Skills Conference — Learn. Build. Share.
+        <a href="https://freecodecamp.org">freecodecamp.org</a>
+    </footer>
+</body>
+
+</html>

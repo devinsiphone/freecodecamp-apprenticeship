@@ -1,0 +1,17 @@
+/* Target every div */
+div {
+    width: 300px;
+    height: 100px;
+}
+
+/* Target every span */
+span {
+    width: 300px;
+    height: 100px;
+}
+
+/* Target every anchor */
+a {
+    width: 250px;
+    height: 75px;
+}

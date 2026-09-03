@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="learn a few HTML-related concepts.">
+    <title>Beginner Developer Reference</title>
+</head>
+
+<body>
+    <main>
+        <h1>Beginner Developer Reference</h1>
+
+        <p>
+            This reference page is designed to help beginner web developers review a few useful HTML concepts and see
+            how
+            specialized semantic elements can give content clearer meaning and structure.
+        </p>
+
+        <p><s>Our website requires Internet Explorer 11 to work properly.</s></p>
+
+        <section>
+            <h2>How Do You Display Mathematical Equations in HTML?</h2>
+
+            <p>
+                The superscript element is used to display a piece of text as a superscript. A superscript is a symbol
+                or letter printed above the normal line of text.
+            </p>
+
+            <p>
+                Here is an example using the superscript element to illustrate exponents:
+            </p>
+
+            <p>HTML :
+                <code>&lt;p&gt;x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; = z&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code>
+            </p>
+
+            <p>Output : x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></p>
+
+            <p>
+                It is important to note that the superscript element should only be used for typographical reasons. If
+                you want to style a piece of text with a raised baseline, then you should use CSS instead of the
+                superscript element.
+            </p>
+
+        </section>
+        <section>
+            <h2>How Do You Display Chemical Formulas in HTML?</h2>
+
+            <p>
+                To represent chemical formulas inside HTML, you would use the subscript element. This element uses a
+                subscript which displays a lowered baseline using smaller text.
+            </p>
+
+            <p>
+                Here is an example of using the subscript element to show the chemical representation for carbon
+                dioxide:
+            </p>
+
+            <p>HTML : <code>&lt;p&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;</code></p>
+
+            <p>Output : CO<sub>2</sub></p>
+
+            <p>
+                The number two is wrapped inside sub tags to illustrate that the character should be a subscript.
+            </p>
+
+            <p>
+                Common use cases for the subscript element include chemical formulas, footnotes, and variable
+                subscripts.
+            </p>
+        </section>
+
+        <section>
+            <h2>How Do You Represent Computer Code in HTML?</h2>
+
+            <p>
+                The inline code element is used to represent short snippets of code inside text. Common use cases for
+                the code element
+                would be for technical articles and documentation pages.
+            </p>
+
+            <p>
+                Here is an example of using the <code>code</code> element to show an HTML code snippet:
+            </p>
+
+            <p>HTML : </p>
+            <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;My first web page.&lt;/p&gt;</code></pre>
+
+            <p>Output :</p>
+            <h1>Hello World</h1>
+            <p>My first web page.</p>
+
+            <p>The <code>&lt;p&gt;</code> element is used to define a paragraph in HTML.</p>
+
+        </section>
+        <section>
+            <h2>What Is the Ruby Element Used For?</h2>
+
+            <p>
+                The <code>ruby</code> element represents small text shown above or below the main text. It is typically
+                used to show the pronunciation of East Asian characters. Here is a <code>ruby</code> element example:
+            </p>
+
+            <p>
+                HTML :
+                <code>
+                    &lt;ruby&gt; 明日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Ashita&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;
+                </code>
+            </p>
+
+            <p>
+                Output :
+                <ruby> 明日 <rp>(</rp>
+                    <rt>Ashita</rt>
+                    <rp>)</rp>
+                </ruby>
+            </p>
+        </section>
+        <section>
+            <h2>What Is the U Element Used For?</h2>
+
+            <p>
+                The unarticulated annotation element, or <code>u</code> element for short, is used to represent inline
+                text that has non-textual
+                annotation applied.
+            </p>
+
+            <p>
+                Here is an example of using the <code>u</code> element to highlight various spelling errors:
+            </p>
+
+            <p>
+                HTML :
+                <code>
+                    The word &lt;u&gt;accomodate&lt;/u&gt; is misspelled.
+                </code>
+            </p>
+
+            <p>
+                Output :
+                The word <u>accomodate</u> is misspelled.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p><a href="https://freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>
+</body>
+
+</html>

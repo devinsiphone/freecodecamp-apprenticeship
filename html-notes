@@ -1,0 +1,8418 @@
+BASIC HTML REVIEW
+=================
+
+1. HTML BASICS
+==============
+
+HTML
+----
+
+HTML = HyperText Markup Language
+
+HTML provides the CONTENT and STRUCTURE of a webpage.
+
+HTML is made up of elements such as:
+
+- headings
+- paragraphs
+- links
+- images
+- lists
+- sections
+- buttons
+- audio
+- video
+
+
+HTML ELEMENTS
+-------------
+
+Most HTML elements have:
+
+1. Opening tag
+2. Content
+3. Closing tag
+
+Syntax:
+
+<element>Content</element>
+
+Example:
+
+<p>This is a paragraph.</p>
+
+Opening tag:
+
+<p>
+
+Closing tag:
+
+</p>
+
+
+VOID ELEMENTS
+-------------
+
+Void elements do not contain content and do not have closing tags.
+
+Examples:
+
+<img>
+<meta>
+<link>
+<input>
+
+You may sometimes see a slash at the end:
+
+<img />
+
+Both styles are generally accepted:
+
+<img>
+
+<img />
+
+
+ATTRIBUTES
+----------
+
+Attributes provide additional information or configuration for an element.
+
+Attributes are placed inside the opening tag.
+
+Syntax:
+
+<element attribute="value">Content</element>
+
+Example:
+
+<a href="https://example.com">Visit Example</a>
+
+Here:
+
+a       = element
+href    = attribute
+URL     = attribute value
+
+
+BOOLEAN ATTRIBUTES
+------------------
+
+Boolean attributes are either present or absent.
+
+Present = true
+Absent  = false
+
+Examples:
+
+disabled
+readonly
+required
+controls
+muted
+loop
+autoplay
+allowfullscreen
+
+Example:
+
+<input required>
+
+The presence of "required" enables the behavior.
+
+
+HTML COMMENTS
+-------------
+
+Comments are notes inside your HTML source code.
+
+They are not displayed on the webpage.
+
+Syntax:
+
+<!-- This is a comment -->
+
+
+2. COMMON HTML ELEMENTS
+=======================
+
+HEADINGS
+--------
+
+HTML provides six heading levels:
+
+<h1>
+<h2>
+<h3>
+<h4>
+<h5>
+<h6>
+
+h1 = highest importance
+h6 = lowest importance
+
+Example:
+
+<h1>Main Page Title</h1>
+<h2>Major Section</h2>
+<h3>Subsection</h3>
+
+
+PARAGRAPH
+---------
+
+Use <p> for paragraphs.
+
+Example:
+
+<p>This is a paragraph.</p>
+
+
+IMAGE
+-----
+
+Use <img> to display an image.
+
+Important attributes:
+
+src = location of the image
+alt = alternative description of the image
+
+Example:
+
+<img src="dog.jpg" alt="A brown dog playing outside">
+
+The alt attribute is important for accessibility and should
+describe meaningful images.
+
+
+BODY
+----
+
+The <body> contains the visible content of the HTML document.
+
+Example:
+
+<body>
+    <h1>My Website</h1>
+    <p>Welcome to my website.</p>
+</body>
+
+
+SECTION
+-------
+
+<section> divides related content into logical sections.
+
+Example:
+
+<section>
+    <h2>About Me</h2>
+    <p>I am learning HTML.</p>
+</section>
+
+
+DIV
+---
+
+<div> is a generic container.
+
+It does not provide specific semantic meaning.
+
+Example:
+
+<div>
+    <h2>News</h2>
+    <p>Today's news...</p>
+</div>
+
+Divs are commonly used for:
+
+- grouping elements
+- CSS layouts
+- JavaScript behavior
+
+
+ANCHOR / LINK
+-------------
+
+Use <a> to create hyperlinks.
+
+The href attribute specifies the destination.
+
+Example:
+
+<a href="https://www.freecodecamp.org">
+    Visit freeCodeCamp
+</a>
+
+
+UNORDERED LIST
+--------------
+
+<ul> creates a bulleted list.
+
+Each item uses <li>.
+
+Example:
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+
+ORDERED LIST
+------------
+
+<ol> creates a numbered list.
+
+Example:
+
+<ol>
+    <li>Open Sublime Text</li>
+    <li>Create index.html</li>
+    <li>Write HTML</li>
+</ol>
+
+
+EMPHASIS
+--------
+
+<em> adds semantic emphasis to text.
+
+Example:
+
+<p>I <em>really</em> like HTML.</p>
+
+
+STRONG IMPORTANCE
+-----------------
+
+<strong> indicates strong importance, seriousness, or urgency.
+
+Example:
+
+<p>
+    <strong>Warning:</strong> Save your work first.
+</p>
+
+
+FIGURE AND FIGCAPTION
+---------------------
+
+<figure> groups self-contained media/content.
+
+<figcaption> provides a caption for it.
+
+Example:
+
+<figure>
+    <img src="mountain.jpg" alt="Mountain at sunrise">
+    <figcaption>Sunrise over the mountains.</figcaption>
+</figure>
+
+
+MAIN
+----
+
+<main> represents the primary content of the page.
+
+Example:
+
+<main>
+    <h1>HTML Tutorial</h1>
+    <p>Learn HTML fundamentals.</p>
+</main>
+
+
+FOOTER
+------
+
+<footer> usually appears near the bottom of a page or section.
+
+It commonly contains:
+
+- copyright information
+- contact information
+- navigation links
+- legal links
+
+Example:
+
+<footer>
+    <p>Copyright 2026 Example Company</p>
+</footer>
+
+
+BUTTON
+------
+
+<button> creates a clickable button.
+
+Example:
+
+<button>Click Me</button>
+
+
+3. IDENTIFIERS AND GROUPING
+===========================
+
+ID
+--
+
+The id attribute uniquely identifies an element.
+
+Example:
+
+<h1 id="page-title">My Website</h1>
+
+An ID should normally appear only ONCE in an HTML document.
+
+IDs cannot contain spaces.
+
+Multiple words can be separated with:
+
+- hyphens
+- underscores
+
+Examples:
+
+id="page-title"
+
+id="page_title"
+
+
+CLASS
+-----
+
+Classes group elements together.
+
+Example:
+
+<div class="card"></div>
+
+Unlike IDs, the same class can be used multiple times.
+
+Example:
+
+<div class="card"></div>
+<div class="card"></div>
+<div class="card"></div>
+
+
+MULTIPLE CLASSES
+----------------
+
+An element can have multiple classes separated by spaces.
+
+Example:
+
+<div class="card featured"></div>
+
+This element has two classes:
+
+card
+featured
+
+
+ID VS CLASS
+-----------
+
+ID:
+
+- identifies one unique element
+- normally used once per page
+
+Class:
+
+- groups elements
+- can be reused
+- an element can have multiple classes
+
+
+4. SPECIAL CHARACTERS AND EXTERNAL RESOURCES
+============================================
+
+HTML ENTITIES
+-------------
+
+Some characters have special meaning in HTML.
+
+HTML entities allow these characters to be displayed as text.
+
+Examples:
+
+&lt;      displays <
+&gt;      displays >
+&amp;     displays &
+&quot;    displays "
+&apos;    displays '
+
+Example:
+
+<p>The &lt;img&gt; element displays an image.</p>
+
+Browser displays:
+
+The <img> element displays an image.
+
+
+LINK ELEMENT
+------------
+
+The <link> element connects an HTML document to an external resource.
+
+A common use is loading CSS.
+
+Example:
+
+<link rel="stylesheet" href="styles.css">
+
+Important attributes:
+
+rel  = relationship between the resources
+href = location of the resource
+
+
+SCRIPT ELEMENT
+--------------
+
+<script> adds or loads JavaScript.
+
+JavaScript can be written directly inside:
+
+<script>
+    alert("Hello!");
+</script>
+
+However, JavaScript is commonly stored in an external file.
+
+Example:
+
+<script src="script.js"></script>
+
+src = location of the JavaScript file
+
+
+5. HTML BOILERPLATE AND ENCODING
+================================
+
+A basic HTML document:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>My Website</h1>
+
+</body>
+
+</html>
+
+
+DOCTYPE
+-------
+
+<!DOCTYPE html>
+
+Tells the browser that the document uses modern HTML.
+
+
+HTML ELEMENT
+------------
+
+<html> is the root or top-level element.
+
+Example:
+
+<html lang="en">
+
+lang="en" specifies that the document language is English.
+
+
+HEAD
+----
+
+<head> contains information ABOUT the page.
+
+Most content inside <head> is not displayed as normal page content.
+
+Common elements inside <head>:
+
+<title>
+<meta>
+<link>
+
+
+BODY
+----
+
+<body> contains the content displayed on the webpage.
+
+
+META
+----
+
+<meta> provides metadata about the webpage.
+
+Examples include:
+
+- character encoding
+- SEO descriptions
+- social-media information
+
+
+TITLE
+-----
+
+<title> determines the text shown in the browser tab.
+
+Example:
+
+<title>Devin's HTML Notes</title>
+
+
+CHARACTER ENCODING
+------------------
+
+UTF-8 is the standard character encoding commonly used on the web.
+
+Use:
+
+<meta charset="utf-8">
+
+Character encoding tells the computer how characters should be
+represented and interpreted.
+
+
+6. SEO AND SOCIAL SHARING
+=========================
+
+SEO
+---
+
+SEO = Search Engine Optimization
+
+SEO is the practice of making webpages easier for search engines
+to understand and discover.
+
+
+META DESCRIPTION
+----------------
+
+A meta description provides a short description of the webpage.
+
+Example:
+
+<meta
+    name="description"
+    content="Learn the fundamentals of HTML and web development."
+>
+
+The description can help search engines understand the page.
+
+
+OPEN GRAPH
+----------
+
+Open Graph metadata controls how a webpage may appear when shared
+on social-media platforms.
+
+Open Graph tags are placed inside <head>.
+
+
+OG:TITLE
+--------
+
+Sets the title used when sharing the page.
+
+Example:
+
+<meta property="og:title" content="HTML Fundamentals">
+
+
+OG:TYPE
+-------
+
+Describes the type of content.
+
+Example:
+
+<meta property="og:type" content="website">
+
+Possible content types include things such as:
+
+- website
+- article
+- video
+- music
+
+
+OG:IMAGE
+--------
+
+Specifies the image used when the page is shared.
+
+Example:
+
+<meta
+    property="og:image"
+    content="https://example.com/preview.jpg"
+>
+
+
+OG:URL
+------
+
+Specifies the canonical URL associated with the shared content.
+
+Example:
+
+<meta
+    property="og:url"
+    content="https://example.com"
+>
+
+
+7. MEDIA ELEMENTS AND OPTIMIZATION
+=================================
+
+REPLACED ELEMENTS
+-----------------
+
+A replaced element displays content that comes from an external
+resource.
+
+Examples include:
+
+<img>
+<iframe>
+<video>
+<embed>
+
+The browser replaces the HTML element with the external content.
+
+
+IFRAME
+------
+
+iframe = inline frame
+
+An iframe embeds another HTML resource within the current page.
+
+Example:
+
+<iframe
+    src="https://example.com"
+    title="Example website">
+</iframe>
+
+
+IFRAME ATTRIBUTES
+-----------------
+
+Common iframe attributes include:
+
+src
+title
+width
+height
+allow
+referrerpolicy
+allowfullscreen
+
+Example:
+
+<iframe
+    src="video-url"
+    title="Video player"
+    width="560"
+    height="315"
+    allowfullscreen>
+</iframe>
+
+
+ALLOWFULLSCREEN
+---------------
+
+allowfullscreen is a boolean attribute.
+
+It allows iframe content such as a video to enter fullscreen mode.
+
+
+EMBEDDING YOUTUBE VIDEO
+-----------------------
+
+YouTube videos normally use an EMBED URL rather than the standard
+watch URL.
+
+Example structure:
+
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    title="YouTube video player"
+    allowfullscreen>
+</iframe>
+
+
+INPUT TYPE IMAGE
+----------------
+
+An <input> can behave as a replaced element when its type is image.
+
+Example:
+
+<input
+    type="image"
+    src="button.png"
+    alt="Submit"
+>
+
+
+MEDIA OPTIMIZATION
+------------------
+
+Three important considerations when optimizing media:
+
+1. File size
+2. File format
+3. Compression
+
+Smaller optimized media files can improve page-loading performance.
+
+
+IMAGE FORMATS
+-------------
+
+Common traditional formats:
+
+PNG
+JPG / JPEG
+
+Modern optimized formats include:
+
+WEBP
+AVIF
+
+Modern formats can often provide smaller files while maintaining
+good image quality.
+
+
+IMAGE LICENSES
+--------------
+
+Make sure you have permission to use an image.
+
+Examples of licenses or categories include:
+
+Public Domain
+
+    Generally not restricted by copyright.
+
+Creative Commons Zero / CC0
+
+    Intended to place works in the public domain.
+
+Creative Commons
+
+    May allow use under specific conditions.
+
+Other permissive licenses
+
+    Usage depends on the terms of the license.
+
+
+SVG
+---
+
+SVG = Scalable Vector Graphics
+
+SVG graphics are based on:
+
+- paths
+- coordinates
+- mathematical shapes
+
+Because SVG is vector-based, it can be enlarged or reduced without
+the normal quality loss associated with raster images.
+
+
+8. AUDIO AND VIDEO
+==================
+
+AUDIO
+-----
+
+Use <audio> to add audio.
+
+Example:
+
+<audio src="song.mp3"></audio>
+
+Common audio formats include:
+
+MP3
+WAV
+OGG
+
+
+CONTROLS
+--------
+
+The controls boolean attribute displays browser playback controls.
+
+Example:
+
+<audio src="song.mp3" controls></audio>
+
+Controls can allow users to:
+
+- play
+- pause
+- resume
+- change volume
+- seek through media
+
+
+AUTOPLAY
+--------
+
+autoplay tells the browser to begin playing media automatically
+when possible.
+
+Example:
+
+<audio src="song.mp3" autoplay></audio>
+
+Important:
+
+Modern browsers frequently restrict autoplay, especially when
+audio is not muted.
+
+
+LOOP
+----
+
+loop causes media to repeat.
+
+Example:
+
+<audio src="song.mp3" controls loop></audio>
+
+
+MUTED
+-----
+
+muted causes media to begin muted.
+
+Example:
+
+<audio src="song.mp3" controls muted></audio>
+
+
+SOURCE ELEMENT
+--------------
+
+Different browsers may support different media formats.
+
+Multiple <source> elements can be placed inside <audio> or <video>.
+
+Example:
+
+<audio controls>
+    <source src="song.ogg" type="audio/ogg">
+    <source src="song.wav" type="audio/wav">
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+The browser selects a source format it supports.
+
+
+VIDEO
+-----
+
+Use <video> to display video.
+
+Common formats include:
+
+MP4
+OGG
+WEBM
+
+Example:
+
+<video src="movie.mp4" controls></video>
+
+
+VIDEO ATTRIBUTES
+----------------
+
+Many attributes used with audio also work with video:
+
+controls
+autoplay
+loop
+muted
+
+
+Example:
+
+<video
+    src="movie.mp4"
+    controls
+    loop
+    muted>
+</video>
+
+
+POSTER
+------
+
+poster specifies an image displayed while the video is loading
+or before playback starts.
+
+Example:
+
+<video
+    src="movie.mp4"
+    controls
+    poster="preview.jpg">
+</video>
+
+poster is specific to video and is not an audio attribute.
+
+
+9. LINK TARGET ATTRIBUTE
+========================
+
+The target attribute determines WHERE a link opens.
+
+Example:
+
+<a href="https://example.com" target="_blank">
+    Example
+</a>
+
+
+_SELF
+-----
+
+target="_self"
+
+Default behavior.
+
+Opens the destination in the current browsing context.
+
+Usually:
+
+current tab/window
+
+
+_BLANK
+------
+
+target="_blank"
+
+Opens the destination in a new browsing context.
+
+Usually:
+
+new browser tab
+
+
+_PARENT
+-------
+
+target="_parent"
+
+Opens the destination in the parent browsing context.
+
+This is particularly relevant when working inside iframes.
+
+
+_TOP
+----
+
+target="_top"
+
+Opens the destination in the highest-level browsing context.
+
+Useful when content is nested inside multiple frames.
+
+
+EXPERIMENTAL VALUE
+------------------
+
+_unfencedTop
+
+This is associated with the experimental FencedFrame API.
+
+It is not something you will normally need in basic HTML.
+
+
+10. FILE PATHS AND URLs
+=======================
+
+PATH
+----
+
+A path specifies the location of a file or directory.
+
+Paths are used to locate:
+
+- webpages
+- images
+- CSS files
+- JavaScript files
+- fonts
+- media
+
+
+PATH SEPARATOR
+--------------
+
+A slash separates folders and files in a path.
+
+Example:
+
+images/photos/cat.jpg
+
+
+CURRENT DIRECTORY
+-----------------
+
+.
+
+A single dot refers to the current directory.
+
+Example:
+
+./styles.css
+
+Meaning:
+
+styles.css is located relative to the current directory.
+
+
+PARENT DIRECTORY
+----------------
+
+..
+
+Two dots refer to the parent directory.
+
+Example:
+
+../styles.css
+
+Meaning:
+
+move up one directory, then find styles.css.
+
+
+EXAMPLES
+--------
+
+public/index.html
+
+./favicon.ico
+
+../css/styles.css
+
+
+ABSOLUTE PATH
+-------------
+
+An absolute path describes the complete route to a resource in a
+file system.
+
+It begins from the root of the file system or hierarchy.
+
+
+ABSOLUTE URL
+------------
+
+An absolute URL provides the complete web address.
+
+It generally includes:
+
+protocol
+domain
+path
+
+Example:
+
+https://example.com/images/logo.svg
+
+Parts:
+
+https://
+    protocol
+
+example.com
+    domain
+
+/images/logo.svg
+    path
+
+
+RELATIVE PATH
+-------------
+
+A relative path specifies a location relative to the current file.
+
+Example:
+
+about.html
+
+If index.html and about.html are in the same folder:
+
+<a href="about.html">About</a>
+
+
+ABSOLUTE URL VS RELATIVE URL
+----------------------------
+
+Absolute:
+
+<a href="https://example.com/about.html">About</a>
+
+Relative:
+
+<a href="about.html">About</a>
+
+Absolute URLs include the complete location.
+
+Relative URLs depend on the location of the current document.
+
+
+11. CSS LINK STATES
+===================
+
+Links can exist in several states.
+
+These states can be selected using CSS pseudo-classes.
+
+
+:link
+-----
+
+A link that has not yet been visited.
+
+Example:
+
+a:link {
+    /* styles */
+}
+
+
+:visited
+--------
+
+A link the user has previously visited.
+
+Example:
+
+a:visited {
+    /* styles */
+}
+
+Browsers commonly display visited links differently by default.
+
+
+:hover
+------
+
+Applies while the mouse pointer is over a link.
+
+Example:
+
+a:hover {
+    /* styles */
+}
+
+
+:focus
+------
+
+Applies when the link receives keyboard or programmatic focus.
+
+Example:
+
+a:focus {
+    /* styles */
+}
+
+Focus is particularly important for keyboard accessibility.
+
+
+:active
+-------
+
+Applies while the user is actively activating the link.
+
+Usually this occurs while the mouse button is being pressed.
+
+Example:
+
+a:active {
+    /* styles */
+}
+
+
+QUICK REFERENCE
+===============
+
+HTML STRUCTURE
+--------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+</head>
+
+<body>
+    <main>
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </main>
+</body>
+</html>
+
+
+COMMON ELEMENTS
+---------------
+
+<html>          Root HTML element
+<head>          Metadata about document
+<body>          Visible page content
+<title>         Browser tab title
+<meta>          Metadata
+<link>          External resource
+<script>        JavaScript
+<main>          Main page content
+<section>       Related section of content
+<div>           Generic container
+<h1>-<h6>       Headings
+<p>             Paragraph
+<a>             Link
+<img>           Image
+<ul>            Unordered list
+<ol>            Ordered list
+<li>            List item
+<em>            Emphasis
+<strong>        Strong importance
+<figure>        Self-contained media/content
+<figcaption>    Figure caption
+<button>        Clickable button
+<iframe>        Embedded webpage/media
+<audio>         Audio
+<video>         Video
+<source>        Alternative media source
+
+
+COMMON ATTRIBUTES
+-----------------
+
+id              Unique element identifier
+class           Element grouping
+href            Link/resource destination
+src             External resource location
+alt             Alternative image text
+title           Descriptive/title information
+lang            Document language
+charset         Character encoding
+target          Where link opens
+width           Width
+height          Height
+controls        Media controls
+autoplay        Automatically play media
+loop            Repeat media
+muted           Start media muted
+poster          Video preview image
+allowfullscreen Allow fullscreen iframe content
+required        Require form value
+disabled        Disable an element
+readonly        Prevent editing
+
+
+IMPORTANT BOOLEAN ATTRIBUTES
+----------------------------
+
+required
+disabled
+readonly
+controls
+autoplay
+loop
+muted
+allowfullscreen
+
+Boolean attributes are TRUE when present.
+
+
+IMPORTANT PATH SYMBOLS
+----------------------
+
+/       Path separator
+
+./      Current directory
+
+../     Parent directory
+
+
+LINK TARGETS
+------------
+
+_self       Current tab/context
+
+_blank      New tab/context
+
+_parent     Parent browsing context
+
+_top        Highest browsing context
+
+
+LINK STATES
+-----------
+
+:link       Unvisited link
+
+:visited    Previously visited link
+
+:hover      Mouse hovering over link
+
+:focus      Link has focus
+
+:active     Link is being activated
+
+
+MEDIA FORMATS
+-------------
+
+Images:
+JPG
+PNG
+WEBP
+AVIF
+SVG
+
+Audio:
+MP3
+WAV
+OGG
+
+Video:
+MP4
+OGG
+WEBM
+
+
+KEY IDEAS TO REMEMBER
+=====================
+
+1. HTML defines content and structure.
+
+2. Most elements have an opening tag and closing tag.
+
+3. Void elements such as <img> and <meta> do not contain content.
+
+4. Attributes provide additional information about elements.
+
+5. <h1> through <h6> represent heading hierarchy.
+
+6. <a> creates links and href specifies their destination.
+
+7. <img> uses src for the image and alt for alternative text.
+
+8. IDs should be unique.
+
+9. Classes can be reused.
+
+10. <head> contains metadata.
+
+11. <body> contains visible page content.
+
+12. UTF-8 is normally declared using:
+
+    <meta charset="utf-8">
+
+13. Meta descriptions can help search engines understand a page.
+
+14. Open Graph metadata affects how links appear when shared.
+
+15. iframe embeds external HTML/media content.
+
+16. audio and video support controls, autoplay, loop, and muted.
+
+17. video additionally supports poster images.
+
+18. Multiple <source> elements can provide alternative media formats.
+
+19. target="_blank" normally opens a link in a new tab.
+
+20. ./ refers to the current directory.
+
+21. ../ refers to the parent directory.
+
+22. Absolute URLs contain the complete web address.
+
+23. Relative paths depend on the current file's location.
+
+24. CSS link states include:
+    :link
+    :visited
+    :hover
+    :focus
+    :active
+
+25. Modern image formats such as WEBP and AVIF can reduce image
+    file size.
+
+26. SVG graphics scale without losing quality.
+
+
+SEMANTIC HTML REVIEW
+====================
+
+SEMANTIC HTML
+-------------
+
+Semantic HTML uses elements based on the MEANING and PURPOSE of the content.
+
+Semantic HTML helps:
+- organize a page logically
+- improve accessibility
+- help screen readers understand page structure
+- make code easier for developers to understand
+
+Presentational HTML focuses only on appearance.
+
+Old/deprecated presentational elements include:
+- <center>
+- <big>
+- <font>
+
+
+HEADING STRUCTURE
+-----------------
+
+HTML headings range from:
+
+<h1> through <h6>
+
+<h1> = highest-level heading
+<h6> = lowest-level heading
+
+Heading levels should follow a logical hierarchy.
+
+Avoid skipping heading levels.
+
+Example:
+
+<h1>Web Development</h1>
+    <h2>HTML</h2>
+        <h3>Semantic HTML</h3>
+
+Skipping heading levels can make page structure harder for screen readers
+and negatively affect accessibility.
+
+
+PAGE STRUCTURE ELEMENTS
+-----------------------
+
+<header>
+
+Represents introductory content for a page or section.
+
+Example:
+
+<header>
+    <h1>Developer Blog</h1>
+    <p>Learning web development one project at a time.</p>
+</header>
+
+
+<main>
+
+Contains the primary content of the page.
+
+Example:
+
+<main>
+    <h1>My Blog</h1>
+    <p>Welcome to my website.</p>
+</main>
+
+
+<section>
+
+Groups related content into a thematic section.
+
+Example:
+
+<section>
+    <h2>About Me</h2>
+    <p>I am learning web development.</p>
+</section>
+
+
+<nav>
+
+Contains navigation links.
+
+Example:
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<article>
+
+Represents independent, self-contained content.
+
+Good uses:
+- blog posts
+- news stories
+- event entries
+- forum posts
+
+Example:
+
+<article>
+    <h2>My First Blog Post</h2>
+    <p>This is my first article.</p>
+</article>
+
+
+FIGURES
+-------
+
+<figure>
+
+Groups an image, illustration, diagram, or similar content with related
+information.
+
+<figcaption>
+
+Provides a visible caption for the figure.
+
+Example:
+
+<figure>
+    <img src="cat.jpg" alt="Two tabby kittens sleeping together.">
+    <figcaption>Two sleeping kittens</figcaption>
+</figure>
+
+The <figcaption> belongs INSIDE the <figure>.
+
+
+TEXT EMPHASIS
+-------------
+
+<em>
+
+Represents stress emphasis.
+
+Example:
+
+<p>I <em>really</em> want to learn HTML.</p>
+
+
+<i>
+
+Represents text that is different from the surrounding prose, such as:
+- foreign words
+- technical terms
+- thoughts
+- alternative voice or mood
+
+Example:
+
+<p>The French phrase <i lang="fr">je ne sais quoi</i> is often used in English.</p>
+
+The lang attribute identifies the language.
+
+IMPORTANT:
+
+Do not use <i> or <em> merely because you want italic-looking text.
+
+If the goal is only visual styling, use CSS.
+
+
+<strong>
+
+Represents strong importance, seriousness, or urgency.
+
+Example:
+
+<p><strong>Warning:</strong> Do not delete this file.</p>
+
+
+<b>
+
+Draws attention to text without saying that the text is especially important.
+
+Possible uses:
+- keywords
+- product names
+- important terms in a summary
+
+Example:
+
+<p>The <b>SuperSound 3000</b> received the highest rating.</p>
+
+
+DESCRIPTION LISTS
+-----------------
+
+<dl>
+
+Creates a description list.
+
+<dt>
+
+Represents a term.
+
+<dd>
+
+Provides the description or definition.
+
+Example:
+
+<dl>
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+</dl>
+
+
+QUOTATIONS
+----------
+
+<blockquote>
+
+Used for a longer quotation that stands on its own.
+
+The cite attribute can contain the URL of the source.
+
+Example:
+
+<blockquote cite="https://example.com/article">
+    This is a longer quotation from another source.
+</blockquote>
+
+
+<q>
+
+Used for short quotations that appear inside normal text.
+
+Example:
+
+<p>Jordan said, <q>Practice every day.</q></p>
+
+
+<cite>
+
+Represents the title of a referenced creative work.
+
+Examples:
+- book title
+- article title
+- movie title
+
+Do NOT use <cite> simply for a person's job title.
+
+
+ABBREVIATIONS
+-------------
+
+<abbr>
+
+Represents an abbreviation.
+
+Use title to provide the full meaning.
+
+Example:
+
+<p>
+    <abbr title="HyperText Markup Language">HTML</abbr>
+    is the foundation of a web page.
+</p>
+
+
+CONTACT INFORMATION
+-------------------
+
+<address>
+
+Represents contact information for a person or organization.
+
+Example:
+
+<address>
+    123 Main Street<br>
+    Atlanta, GA 30303
+</address>
+
+
+<br>
+
+Creates a line break.
+
+It can be useful where line breaks are meaningful, such as a mailing address.
+
+Do not use many <br> elements just to create visual spacing.
+
+
+PHONE LINKS
+-----------
+
+Use tel: to create a clickable phone number.
+
+Example:
+
+<a href="tel:+14045550198">(404) 555-0198</a>
+
+
+EMAIL LINKS
+-----------
+
+Use mailto: to create a clickable email address.
+
+Example:
+
+<a href="mailto:hello@example.com">hello@example.com</a>
+
+
+DATES AND TIMES
+---------------
+
+<time>
+
+Represents a date and/or time.
+
+The datetime attribute provides a machine-readable value.
+
+Example:
+
+<time datetime="2026-09-18">September 18, 2026</time>
+
+Date and time together:
+
+<time datetime="2026-09-18T14:00">
+    September 18, 2026 — 2:00 PM
+</time>
+
+
+ISO 8601 DATE/TIME FORMAT
+-------------------------
+
+A common machine-readable format is:
+
+YYYY-MM-DDThh:mm:ss
+
+Example:
+
+2026-09-18T14:30:00
+
+T separates the date from the time.
+
+
+SUPERSCRIPT
+-----------
+
+<sup>
+
+Displays semantic superscript text.
+
+Common uses:
+- exponents
+- ordinal notation
+- superior lettering
+
+Example:
+
+<p>x<sup>2</sup></p>
+
+Displays:
+
+x²
+
+
+SUBSCRIPT
+---------
+
+<sub>
+
+Displays semantic subscript text.
+
+Common uses:
+- chemical formulas
+- variable subscripts
+- footnote references
+
+Example:
+
+<p>CO<sub>2</sub></p>
+
+Displays:
+
+CO₂
+
+
+COMPUTER CODE
+-------------
+
+<code>
+
+Represents computer code.
+
+Use it for short inline code references.
+
+Example:
+
+<p>The <code>&lt;p&gt;</code> element creates a paragraph.</p>
+
+
+<pre>
+
+Represents preformatted text.
+
+Whitespace and line breaks inside <pre> are preserved.
+
+For multi-line code examples, combine <pre> and <code>.
+
+Example:
+
+<pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;My first page.&lt;/p&gt;</code></pre>
+
+Remember:
+
+<code> = identifies computer code
+<pre>  = preserves formatting
+
+
+UNARTICULATED ANNOTATION
+------------------------
+
+<u>
+
+Represents text with a non-textual annotation.
+
+One example is marking a spelling error.
+
+Example:
+
+<p>The word <u>accomodate</u> is misspelled.</p>
+
+Do NOT use <u> merely because you want text to look underlined.
+
+Use CSS when the goal is purely visual.
+
+
+RUBY ANNOTATIONS
+----------------
+
+<ruby>
+
+Groups text with a pronunciation or explanatory annotation.
+
+Often used with East Asian languages.
+
+
+<rt>
+
+Contains the pronunciation or annotation.
+
+
+<rp>
+
+Provides fallback parentheses for browsers that do not properly display
+ruby annotations.
+
+Example:
+
+<ruby>
+    明日
+    <rp>(</rp>
+    <rt>Ashita</rt>
+    <rp>)</rp>
+</ruby>
+
+
+OUTDATED INFORMATION
+--------------------
+
+<s>
+
+Represents information that is no longer accurate or relevant.
+
+Example:
+
+<p>
+    <s>The meeting starts at noon.</s>
+</p>
+
+<p>
+    The meeting has been canceled.
+</p>
+
+Do not use <s> merely because you want a strikethrough appearance.
+
+
+INTERNAL PAGE LINKS
+-------------------
+
+Links can jump to another location on the SAME page.
+
+Create the link:
+
+<a href="#about">About</a>
+
+Create the destination:
+
+<section id="about">
+    <h2>About</h2>
+</section>
+
+The href value:
+
+#about
+
+must match:
+
+id="about"
+
+
+QUICK SEMANTIC HTML CHEAT SHEET
+-------------------------------
+
+<header>
+Introductory content
+
+<nav>
+Navigation links
+
+<main>
+Primary page content
+
+<section>
+Related thematic content
+
+<article>
+Independent/self-contained content
+
+<figure>
+Image, illustration, diagram, etc.
+
+<figcaption>
+Caption belonging to a figure
+
+<em>
+Stress emphasis
+
+<strong>
+Strong importance
+
+<i>
+Alternative voice, technical term, foreign phrase, etc.
+
+<b>
+Draw attention without adding importance
+
+<blockquote>
+Long quotation
+
+<q>
+Short inline quotation
+
+<cite>
+Title of a referenced work
+
+<abbr>
+Abbreviation
+
+<address>
+Contact information
+
+<br>
+Line break
+
+<time>
+Date/time
+
+<sup>
+Superscript
+
+<sub>
+Subscript
+
+<code>
+Computer code
+
+<pre>
+Preformatted text
+
+<u>
+Non-textual annotation
+
+<ruby>
+Ruby annotation container
+
+<rt>
+Ruby pronunciation/annotation
+
+<rp>
+Ruby fallback parentheses
+
+<s>
+No-longer-accurate information
+
+
+MAIN SEMANTIC HTML RULE
+-----------------------
+
+Do not choose an HTML element because of how the browser makes it LOOK.
+
+Choose the element because of what the content MEANS.
+
+Ask yourself:
+
+"What does this content represent?"
+
+Then choose the HTML element whose semantic meaning best matches that content.
+
+HTML TABLES AND FORMS REVIEW
+============================
+
+
+HTML FORMS
+==========
+
+FORM ELEMENT
+------------
+
+<form>
+
+Used to create an HTML form for collecting user input.
+
+Example:
+
+<form action="/submit" method="post">
+
+    <!-- form controls go here -->
+
+</form>
+
+
+FORM ATTRIBUTES
+---------------
+
+action
+
+Specifies the URL where the form data should be sent.
+
+Example:
+
+<form action="https://example.com/register">
+
+
+method
+
+Specifies the HTTP method used when sending the form data.
+
+Common values:
+
+get
+post
+
+Example:
+
+<form action="https://example.com/register" method="post">
+
+
+GET VS POST
+-----------
+
+GET
+
+Form data is generally sent as part of the URL.
+
+Often used when retrieving/searching for information.
+
+
+POST
+
+Form data is sent in the HTTP request body.
+
+Often used when submitting information that changes or creates data.
+
+
+INPUT ELEMENT
+=============
+
+<input>
+
+Creates a form control.
+
+The behavior of an input depends largely on its type attribute.
+
+Example:
+
+<input type="text">
+
+
+COMMON INPUT TYPES
+------------------
+
+type="text"
+
+Creates a normal single-line text field.
+
+Example:
+
+<input type="text">
+
+
+type="email"
+
+Creates an input intended for email addresses.
+
+Browsers can perform basic email-format validation.
+
+Example:
+
+<input type="email">
+
+
+type="number"
+
+Creates an input for numerical values.
+
+Example:
+
+<input type="number">
+
+
+type="radio"
+
+Creates a radio button.
+
+Radio buttons are normally used when the user should choose ONE option
+from a group.
+
+Example:
+
+<input type="radio">
+
+
+type="checkbox"
+
+Creates a checkbox.
+
+Checkboxes are normally used when the user may choose ZERO, ONE,
+or MULTIPLE options.
+
+Example:
+
+<input type="checkbox">
+
+
+type="submit"
+
+Creates a control that submits a form.
+
+Example:
+
+<input type="submit" value="Submit">
+
+
+type="reset"
+
+Resets form controls to their initial values.
+
+Example:
+
+<input type="reset" value="Clear Form">
+
+
+type="button"
+
+Creates a button with no built-in form behavior.
+
+It is commonly used when custom behavior will later be provided,
+usually with JavaScript.
+
+Example:
+
+<input type="button" value="Show Information">
+
+
+COMMON INPUT ATTRIBUTES
+=======================
+
+id
+
+Uniquely identifies an element in the document.
+
+Example:
+
+id="email"
+
+
+name
+
+Identifies the form field when form data is submitted.
+
+Example:
+
+name="email"
+
+
+IMPORTANT:
+
+id and name have DIFFERENT purposes.
+
+id
+→ identifies the element in the document
+
+name
+→ identifies the submitted form field
+
+
+Example:
+
+<input
+    type="email"
+    id="email"
+    name="email"
+>
+
+
+placeholder
+
+Displays a short hint or example inside an input.
+
+Example:
+
+<input
+    type="text"
+    placeholder="John Doe"
+>
+
+
+A placeholder should not replace a proper label.
+
+
+value
+
+Provides a value for a form control.
+
+Example:
+
+<input
+    type="text"
+    value="Jordan Parker"
+>
+
+
+For buttons, value can determine the visible button text.
+
+Example:
+
+<input
+    type="submit"
+    value="Register"
+>
+
+
+size
+
+Controls approximately how many characters are visible in certain
+text inputs.
+
+Example:
+
+<input
+    type="text"
+    size="30"
+>
+
+
+FORM LABELS
+===========
+
+<label>
+
+Provides descriptive text for a form control.
+
+
+EXPLICIT LABEL ASSOCIATION
+--------------------------
+
+The label's for attribute should match the input's id.
+
+Example:
+
+<label for="email">Email Address:</label>
+
+<input
+    type="email"
+    id="email"
+    name="email"
+>
+
+
+Relationship:
+
+for="email"
+        ↓
+id="email"
+
+
+This allows the browser and assistive technologies to determine
+which label belongs to which control.
+
+
+IMPORTANT:
+
+Each id should be UNIQUE within the page.
+
+
+FORM VALIDATION
+===============
+
+HTML provides built-in client-side form validation.
+
+
+required
+--------
+
+Specifies that a field must contain a value before the form can
+normally be submitted.
+
+Example:
+
+<input
+    type="text"
+    required
+>
+
+
+minlength
+---------
+
+Specifies the minimum number of characters allowed.
+
+Example:
+
+<input
+    type="text"
+    minlength="3"
+>
+
+
+maxlength
+---------
+
+Specifies the maximum number of characters allowed.
+
+Example:
+
+<input
+    type="text"
+    maxlength="20"
+>
+
+
+Both can be combined:
+
+<input
+    type="text"
+    minlength="3"
+    maxlength="20"
+>
+
+
+min
+---
+
+Specifies the minimum numerical value allowed.
+
+Example:
+
+<input
+    type="number"
+    min="0"
+>
+
+
+max
+---
+
+Specifies the maximum numerical value allowed.
+
+Example:
+
+<input
+    type="number"
+    max="50"
+>
+
+
+Both can be combined:
+
+<input
+    type="number"
+    min="0"
+    max="50"
+>
+
+
+MULTIPLE VALIDATION RULES
+-------------------------
+
+Validation attributes can be combined.
+
+Example:
+
+<input
+    required
+    type="text"
+    id="username"
+    name="username"
+    minlength="3"
+    maxlength="20"
+>
+
+
+This means:
+
+- the field is required
+- minimum length is 3 characters
+- maximum length is 20 characters
+
+
+CLIENT-SIDE VALIDATION WARNING
+------------------------------
+
+HTML validation helps users catch errors before submission.
+
+It should NOT be treated as a security feature.
+
+Client-side validation can be bypassed.
+
+Applications still need proper server-side validation.
+
+
+FORM STATES
+===========
+
+DEFAULT / EDITABLE
+------------------
+
+A normal input can be focused and edited.
+
+Example:
+
+<input
+    type="text"
+    value="Jordan Parker"
+>
+
+
+READONLY
+--------
+
+readonly
+
+Prevents the user from changing the value.
+
+A readonly input can still normally:
+
+- receive focus
+- be selected
+- have its value submitted with the form
+
+Example:
+
+<input
+    readonly
+    type="email"
+    value="jordan@example.com"
+>
+
+
+DISABLED
+--------
+
+disabled
+
+Makes the control unavailable for interaction.
+
+A disabled input normally:
+
+- cannot be edited
+- cannot receive focus
+- is not submitted with the form
+
+Example:
+
+<input
+    disabled
+    type="text"
+    value="AWS-2026-1048"
+>
+
+
+READONLY VS DISABLED
+--------------------
+
+readonly:
+
+visible
+focusable
+not editable
+normally submitted
+
+
+disabled:
+
+visible
+not focusable
+not editable
+not submitted
+
+
+FOCUS
+-----
+
+A control is focused when it is currently active for user input.
+
+Users can focus controls by:
+
+- clicking them
+- tapping them
+- navigating with the keyboard, such as Tab
+
+Focus is an important part of keyboard accessibility.
+
+
+BUTTON ELEMENT
+==============
+
+<button>
+
+Creates a button.
+
+Common button types:
+
+submit
+reset
+button
+
+
+SUBMIT BUTTON
+-------------
+
+<button type="submit">
+    Register
+</button>
+
+Submits the form.
+
+
+RESET BUTTON
+------------
+
+<button type="reset">
+    Clear Form
+</button>
+
+Resets the form controls.
+
+
+GENERIC BUTTON
+--------------
+
+<button type="button">
+    Show Workshop Info
+</button>
+
+Has no built-in form submission behavior.
+
+Often used with JavaScript later.
+
+
+IMPORTANT BUTTON RULE
+---------------------
+
+Specify the button type explicitly.
+
+Example:
+
+<button type="button">
+
+This avoids accidentally submitting a form when a button is meant
+for some other behavior.
+
+
+FIELDSET AND LEGEND
+===================
+
+<fieldset>
+
+Groups related form controls together.
+
+
+<legend>
+
+Provides a caption or description for the fieldset.
+
+
+Example:
+
+<fieldset>
+
+    <legend>Contact Information</legend>
+
+    <label for="name">Name:</label>
+    <input
+        type="text"
+        id="name"
+        name="name"
+    >
+
+    <label for="email">Email:</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+    >
+
+</fieldset>
+
+
+Good uses for fieldset:
+
+- radio-button groups
+- checkbox groups
+- contact-information groups
+- logically related form questions
+
+
+LEGEND VS LABEL
+---------------
+
+legend
+
+Describes a GROUP of related controls.
+
+
+label
+
+Describes a SPECIFIC form control.
+
+
+Example:
+
+<fieldset>
+
+    <legend>Additional Feedback</legend>
+
+    <label for="comments">
+        Additional comments or suggestions:
+    </label>
+
+    <textarea
+        id="comments"
+        name="comments"
+    ></textarea>
+
+</fieldset>
+
+
+RADIO BUTTONS
+=============
+
+Radio buttons are used when the user should select ONE option
+from a group.
+
+Example:
+
+<fieldset>
+
+    <legend>Was this your first event?</legend>
+
+    <input
+        type="radio"
+        id="yes"
+        name="first-event"
+        value="yes"
+    >
+    <label for="yes">Yes</label>
+
+    <input
+        type="radio"
+        id="no"
+        name="first-event"
+        value="no"
+    >
+    <label for="no">No</label>
+
+</fieldset>
+
+
+RADIO GROUP RULE
+----------------
+
+Radio buttons in the same group share the SAME name.
+
+Example:
+
+name="first-event"
+
+
+But each radio button should have:
+
+- a unique id
+- its own value
+
+
+Example:
+
+YES
+
+id="yes"
+name="first-event"
+value="yes"
+
+
+NO
+
+id="no"
+name="first-event"
+value="no"
+
+
+The shared name causes the browser to treat the controls as
+one mutually exclusive group.
+
+
+CHECKBOXES
+==========
+
+Checkboxes allow users to select ZERO, ONE, or MULTIPLE options.
+
+Example:
+
+<fieldset>
+
+    <legend>Which sessions did you attend?</legend>
+
+    <input
+        type="checkbox"
+        id="html"
+        name="sessions"
+        value="HTML"
+    >
+    <label for="html">HTML</label>
+
+    <input
+        type="checkbox"
+        id="forms"
+        name="sessions"
+        value="HTML Forms"
+    >
+    <label for="forms">HTML Forms</label>
+
+</fieldset>
+
+
+CHECKBOX RULES
+--------------
+
+Related checkboxes may share the same name.
+
+Example:
+
+name="sessions"
+
+
+Each checkbox should still have:
+
+- a unique id
+- a meaningful value
+
+
+Example:
+
+id="html"
+value="HTML"
+
+
+id="forms"
+value="HTML Forms"
+
+
+IMPORTANT DISTINCTION
+---------------------
+
+Radio buttons:
+
+Choose ONE from a group.
+
+
+Checkboxes:
+
+Choose ZERO, ONE, or MANY.
+
+
+SELECT AND OPTION
+=================
+
+<select>
+
+Creates a selection list/dropdown.
+
+
+<option>
+
+Represents one available choice.
+
+
+Example:
+
+<label for="rating">Workshop Rating:</label>
+
+<select
+    id="rating"
+    name="rating"
+>
+
+    <option value="poor">
+        Poor
+    </option>
+
+    <option value="good">
+        Good
+    </option>
+
+    <option value="excellent">
+        Excellent
+    </option>
+
+</select>
+
+
+OPTION VALUE
+------------
+
+The value attribute represents the value submitted with the form.
+
+Example:
+
+<option value="excellent">
+    Excellent
+</option>
+
+
+SELECTED
+--------
+
+The selected attribute makes an option initially selected.
+
+Example:
+
+<option
+    value="good"
+    selected
+>
+    Good
+</option>
+
+
+TEXTAREA
+========
+
+<textarea>
+
+Creates a multi-line text input.
+
+Use textarea when the visitor needs room to enter:
+
+- sentences
+- comments
+- feedback
+- descriptions
+- longer messages
+
+
+Example:
+
+<label for="comments">
+    Additional comments:
+</label>
+
+<textarea
+    id="comments"
+    name="comments"
+    rows="10"
+    cols="50"
+></textarea>
+
+
+Unlike <input>, textarea has both an opening and closing tag.
+
+
+TABLES
+======
+
+HTML tables are used to represent TABULAR DATA.
+
+Tabular data is information that naturally makes sense in
+rows and columns.
+
+Examples:
+
+- attendance reports
+- exam scores
+- schedules
+- financial information
+- product comparisons
+- book catalogs
+
+
+DO NOT USE TABLES FOR PAGE LAYOUT
+---------------------------------
+
+Tables should represent DATA.
+
+Do not use tables simply to position:
+
+- headers
+- navigation
+- images
+- page sections
+- footers
+
+Page layout should be handled with appropriate HTML structure and CSS.
+
+
+BASIC TABLE STRUCTURE
+=====================
+
+<table>
+
+Contains the entire table.
+
+
+Typical structure:
+
+table
+├── caption
+├── thead
+├── tbody
+└── tfoot
+
+
+Example:
+
+<table>
+
+    <caption>Workshop Attendance</caption>
+
+    <thead>
+        ...
+    </thead>
+
+    <tbody>
+        ...
+    </tbody>
+
+    <tfoot>
+        ...
+    </tfoot>
+
+</table>
+
+
+TABLE CAPTION
+=============
+
+<caption>
+
+Provides a title or description for the table.
+
+It belongs directly inside the table.
+
+Example:
+
+<table>
+
+    <caption>
+        Workshop Attendance Report
+    </caption>
+
+    ...
+
+</table>
+
+
+TABLE SECTIONS
+==============
+
+<thead>
+
+Groups the table's header rows.
+
+
+<tbody>
+
+Groups the table's primary data rows.
+
+
+<tfoot>
+
+Groups footer or summary information.
+
+Typical uses:
+
+- totals
+- averages
+- summary rows
+
+
+Example:
+
+<table>
+
+    <thead>
+        ...
+    </thead>
+
+    <tbody>
+        ...
+    </tbody>
+
+    <tfoot>
+        ...
+    </tfoot>
+
+</table>
+
+
+TABLE ROWS
+==========
+
+<tr>
+
+Creates a table row.
+
+Example:
+
+<tr>
+    ...
+</tr>
+
+
+TABLE HEADER CELLS
+==================
+
+<th>
+
+Creates a table header cell.
+
+A header cell identifies or describes other cells.
+
+Example:
+
+<tr>
+    <th>Workshop</th>
+    <th>Registered</th>
+    <th>Attended</th>
+</tr>
+
+
+A <th> is not simply:
+
+"the bold cell"
+
+or:
+
+"the cell at the top"
+
+It has SEMANTIC meaning.
+
+It identifies related table data.
+
+
+ROW HEADERS
+-----------
+
+A <th> can also identify a row.
+
+Example:
+
+<tr>
+    <th>HTML Foundations</th>
+    <td>40</td>
+    <td>36</td>
+</tr>
+
+
+Here:
+
+HTML Foundations
+
+identifies what the numerical data in that row represents.
+
+
+TABLE DATA CELLS
+================
+
+<td>
+
+Creates an ordinary table data cell.
+
+Example:
+
+<tr>
+    <th>HTML Foundations</th>
+    <td>40</td>
+    <td>36</td>
+</tr>
+
+
+In this example:
+
+HTML Foundations
+→ header identifying the row
+
+40
+→ ordinary data
+
+36
+→ ordinary data
+
+
+TABLE HIERARCHY
+===============
+
+A useful mental model:
+
+table
+
+    caption
+
+    thead
+        tr
+            th
+            th
+            th
+
+    tbody
+        tr
+            th
+            td
+            td
+
+        tr
+            th
+            td
+            td
+
+    tfoot
+        tr
+            th
+            td
+
+
+COLSPAN
+=======
+
+colspan
+
+Specifies how many columns a table cell should occupy.
+
+Example:
+
+<tr>
+    <th colspan="2">
+        Average Score
+    </th>
+
+    <td>89</td>
+</tr>
+
+
+Here:
+
+Average Score
+
+occupies the space of TWO columns.
+
+
+IMPORTANT:
+
+Do not use colspan simply to make something look wider.
+
+Use it when one piece of data logically represents multiple columns.
+
+
+TABLE EXAMPLE
+=============
+
+<table>
+
+    <caption>
+        HTML Workshop Scores
+    </caption>
+
+    <thead>
+
+        <tr>
+            <th>Participant</th>
+            <th>Assessment</th>
+            <th>Score</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <th>Jordan Parker</th>
+            <td>Semantic HTML</td>
+            <td>92</td>
+        </tr>
+
+        <tr>
+            <th>Morgan Lee</th>
+            <td>Semantic HTML</td>
+            <td>88</td>
+        </tr>
+
+    </tbody>
+
+    <tfoot>
+
+        <tr>
+            <th colspan="2">
+                Average Score
+            </th>
+
+            <td>90</td>
+        </tr>
+
+    </tfoot>
+
+</table>
+
+
+HTML VALIDATORS
+===============
+
+An HTML validator checks markup against HTML standards.
+
+Validators can help detect problems such as:
+
+- invalid nesting
+- duplicate IDs
+- malformed elements
+- incorrect element placement
+- missing required attributes
+- structural errors
+
+
+IMPORTANT:
+
+A page may LOOK correct in a browser while still containing
+invalid HTML.
+
+Browsers try to recover from malformed markup.
+
+
+DEVELOPMENT WORKFLOW
+--------------------
+
+Write HTML
+
+    ↓
+
+Run validator
+
+    ↓
+
+Read errors and warnings
+
+    ↓
+
+Identify the root cause
+
+    ↓
+
+Correct source HTML
+
+    ↓
+
+Validate again
+
+
+VALIDATOR ERRORS
+----------------
+
+One incorrect piece of HTML can sometimes cause several validator
+messages.
+
+Do not assume every message represents a completely separate problem.
+
+Look for the ROOT CAUSE.
+
+
+DEVTOOLS AND DOM INSPECTOR
+==========================
+
+Browser DevTools allow developers to inspect the DOM created by
+the browser.
+
+In Chrome:
+
+Right-click an element
+
+→ Inspect
+
+
+The Elements panel allows you to:
+
+- inspect HTML elements
+- examine nesting
+- inspect attributes
+- temporarily edit elements
+- test possible fixes
+- debug links and IDs
+
+
+SOURCE HTML VS DOM
+==================
+
+SOURCE HTML
+
+The HTML saved in your file.
+
+
+DOM
+
+The browser's parsed representation of the document.
+
+
+These are related, but they are not exactly the same thing.
+
+
+DEVTOOLS EDITS ARE TEMPORARY
+----------------------------
+
+If you edit HTML in DevTools:
+
+the rendered page changes immediately
+
+BUT
+
+your actual index.html file does NOT change.
+
+
+Example workflow:
+
+1. Inspect an element.
+
+2. Change it temporarily in DevTools.
+
+3. Confirm the change fixes the problem.
+
+4. Update the real index.html file.
+
+5. Save the file.
+
+6. Reload the page.
+
+7. Validate again.
+
+
+RELOADING THE PAGE
+------------------
+
+Changes made only in DevTools normally disappear after a page reload.
+
+Why?
+
+Because the browser rebuilds the DOM from the original source file.
+
+
+DEBUGGING INTERNAL LINKS
+========================
+
+DevTools can help inspect links and their destination IDs.
+
+Example:
+
+<a href="#contact">
+    Contact
+</a>
+
+
+Destination:
+
+<section id="contact">
+    ...
+</section>
+
+
+These values must correspond:
+
+href="#contact"
+
+id="contact"
+
+
+QUICK FORM CHEAT SHEET
+======================
+
+<form>
+Container for form controls
+
+action
+Where the form data is sent
+
+method
+HTTP method used to submit the form
+
+<input>
+Form input control
+
+type
+Determines the type of input
+
+id
+Uniquely identifies the control
+
+name
+Identifies submitted form data
+
+value
+Value represented/submitted by the control
+
+placeholder
+Displays a hint/example
+
+<label>
+Describes a specific form control
+
+for
+Associates a label with an element's id
+
+required
+Makes a field mandatory
+
+min
+Minimum numerical value
+
+max
+Maximum numerical value
+
+minlength
+Minimum number of characters
+
+maxlength
+Maximum number of characters
+
+readonly
+Visible/focusable but not editable
+
+disabled
+Unavailable for interaction and not submitted
+
+<fieldset>
+Groups related controls
+
+<legend>
+Describes a fieldset
+
+radio
+Choose one option from a group
+
+checkbox
+Choose zero, one, or multiple options
+
+<select>
+Creates a selection list
+
+<option>
+Choice within a select
+
+<textarea>
+Multi-line text input
+
+<button type="submit">
+Submits a form
+
+<button type="reset">
+Resets a form
+
+<button type="button">
+Generic/custom behavior
+
+
+QUICK TABLE CHEAT SHEET
+=======================
+
+<table>
+Entire table
+
+<caption>
+Table title/description
+
+<thead>
+Header section
+
+<tbody>
+Main data section
+
+<tfoot>
+Summary/footer section
+
+<tr>
+Table row
+
+<th>
+Header cell
+
+<td>
+Ordinary data cell
+
+colspan
+Makes a cell span multiple columns
+
+
+TABLE STRUCTURE CHEAT SHEET
+===========================
+
+<table>
+
+    <caption>...</caption>
+
+    <thead>
+
+        <tr>
+            <th>...</th>
+            <th>...</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <th>...</th>
+            <td>...</td>
+        </tr>
+
+    </tbody>
+
+    <tfoot>
+
+        <tr>
+            <th>...</th>
+            <td>...</td>
+        </tr>
+
+    </tfoot>
+
+</table>
+
+
+MAIN FORMS RULE
+===============
+
+Ask:
+
+"What information am I trying to collect?"
+
+Then choose the form control whose behavior matches the requirement.
+
+
+Examples:
+
+Short text
+→ text input
+
+Email address
+→ email input
+
+Number
+→ number input
+
+Choose exactly one
+→ radio buttons
+
+Choose zero or more
+→ checkboxes
+
+Choose from a dropdown
+→ select + option
+
+Write several sentences
+→ textarea
+
+
+MAIN TABLE RULE
+===============
+
+Ask:
+
+"Does this information naturally belong in rows and columns?"
+
+YES
+→ a table may be appropriate
+
+NO
+→ use normal semantic HTML instead
+
+
+MAIN DEBUGGING RULE
+===================
+
+Do not rely only on whether the page LOOKS correct.
+
+Use multiple tools:
+
+Source code
++
+Browser
++
+DevTools
++
+HTML validator
+
+
+DEVELOPER WORKFLOW
+==================
+
+Write
+    ↓
+Save
+    ↓
+Open in browser
+    ↓
+Inspect with DevTools
+    ↓
+Validate HTML
+    ↓
+Fix errors
+    ↓
+Retest
+    ↓
+Submit
+
+
+KEY TAKEAWAY
+============
+
+FORMS collect structured user input.
+
+TABLES display structured tabular data.
+
+VALIDATORS check whether your markup follows HTML standards.
+
+DEVTOOLS help you inspect and debug what the browser actually
+created from your HTML.
+
+
+HTML ACCESSIBILITY REVIEW
+=========================
+
+
+INTRODUCTION TO ACCESSIBILITY
+=============================
+
+ACCESSIBILITY
+-------------
+
+Web accessibility means designing and developing websites so people
+with disabilities can perceive, understand, navigate, and interact
+with web content.
+
+Accessibility should be considered while building a page rather than
+being added only after development is complete.
+
+
+WCAG
+----
+
+WCAG stands for:
+
+Web Content Accessibility Guidelines
+
+WCAG provides guidelines for making web content more accessible.
+
+The four major WCAG principles are remembered with the acronym:
+
+POUR
+
+
+P = Perceivable
+----------------
+
+Users must be able to perceive the information being presented.
+
+Examples:
+
+- text alternatives for images
+- captions for video
+- transcripts for audio
+- content that can be enlarged
+
+
+O = Operable
+------------
+
+Users must be able to operate the interface.
+
+Examples:
+
+- keyboard navigation
+- accessible buttons
+- logical focus order
+- avoiding interactions that require only a mouse
+
+
+U = Understandable
+------------------
+
+Content and interfaces should be understandable.
+
+Examples:
+
+- clear instructions
+- understandable labels
+- predictable navigation
+- descriptive error messages
+
+
+R = Robust
+----------
+
+Content should work with different browsers, devices, and assistive
+technologies.
+
+Using valid semantic HTML helps make content more robust.
+
+
+ASSISTIVE TECHNOLOGY
+====================
+
+Assistive technology helps people interact with computers and web
+content in different ways.
+
+
+SCREEN READERS
+--------------
+
+Screen readers convert webpage content into speech or other output.
+
+They are commonly used by people who are blind or have significant
+visual impairments.
+
+Screen readers can use HTML semantics to identify:
+
+- headings
+- links
+- buttons
+- forms
+- tables
+- landmarks
+- images
+- lists
+
+
+Good semantic HTML provides information that screen readers can use.
+
+
+LARGE TEXT AND BRAILLE KEYBOARDS
+--------------------------------
+
+Specialized keyboards may provide:
+
+- larger keys
+- larger printed characters
+- braille markings
+- simplified layouts
+
+They can help users with visual or motor impairments.
+
+
+SCREEN MAGNIFIERS
+-----------------
+
+Screen magnification software enlarges portions of the screen.
+
+It is commonly used by people with low vision.
+
+Webpages should remain usable when content is enlarged.
+
+
+ALTERNATIVE POINTING DEVICES
+----------------------------
+
+Some users cannot comfortably use a traditional mouse.
+
+Alternative pointing devices can include:
+
+- trackballs
+- joysticks
+- touchpads
+- specialized switches
+- other adaptive devices
+
+
+VOICE RECOGNITION SOFTWARE
+--------------------------
+
+Voice recognition software allows users to control a computer using
+spoken commands.
+
+It can be especially useful for people with mobility impairments.
+
+Clear link text, labels, and button names can help users activate
+controls by voice.
+
+
+ACCESSIBILITY AUDITING TOOLS
+============================
+
+Automated accessibility tools can identify many common accessibility
+problems.
+
+Examples include:
+
+Google Lighthouse
+WAVE
+IBM Equal Access Accessibility Checker
+axe DevTools
+
+
+IMPORTANT:
+
+Automated tools cannot detect every accessibility problem.
+
+Accessibility testing should combine:
+
+automated testing
++
+manual inspection
++
+keyboard testing
++
+assistive technology testing when possible
+
+
+HEADING STRUCTURE
+=================
+
+HTML headings are:
+
+<h1>
+<h2>
+<h3>
+<h4>
+<h5>
+<h6>
+
+
+Headings communicate the organization of a document.
+
+They should be chosen based on CONTENT STRUCTURE, not because of how
+large or bold they appear.
+
+
+EXAMPLE
+-------
+
+<h1>Web Accessibility Workshop</h1>
+
+<h2>Workshop Topics</h2>
+
+<h3>Semantic HTML</h3>
+
+<h3>ARIA</h3>
+
+<h2>Registration</h2>
+
+
+This represents a logical hierarchy.
+
+
+BAD HEADING STRUCTURE
+---------------------
+
+Avoid skipping levels simply for visual appearance.
+
+Example:
+
+<h1>Web Accessibility Workshop</h1>
+
+<h3>Registration</h3>
+
+
+If Registration is a major section under the page heading, an <h2>
+would normally be more appropriate.
+
+
+WHY HEADINGS MATTER
+-------------------
+
+Screen reader users may navigate directly between headings.
+
+A logical heading structure allows them to understand and scan the
+page more efficiently.
+
+
+ACCESSIBLE TABLES
+=================
+
+Tables should represent tabular information.
+
+Use semantic table elements so assistive technologies can understand
+relationships between headers and data.
+
+
+IMPORTANT TABLE ELEMENTS
+------------------------
+
+<table>
+Contains the entire table.
+
+<caption>
+Provides a title or description for the table.
+
+<thead>
+Contains table header rows.
+
+<tbody>
+Contains the main table data.
+
+<tfoot>
+Contains summary information.
+
+<tr>
+Represents a table row.
+
+<th>
+Represents a header cell.
+
+<td>
+Represents an ordinary data cell.
+
+
+TABLE CAPTION
+-------------
+
+A caption helps users understand the purpose of the table.
+
+Example:
+
+<table>
+
+    <caption>
+        Workshop Attendance Results
+    </caption>
+
+    ...
+
+</table>
+
+
+The <caption> should be placed directly inside the <table>, normally
+before the table's row groups.
+
+
+COLUMN HEADERS
+--------------
+
+Use:
+
+scope="col"
+
+when a <th> describes the cells beneath it.
+
+Example:
+
+<th scope="col">Employee</th>
+
+
+ROW HEADERS
+-----------
+
+Use:
+
+scope="row"
+
+when a <th> describes the cells beside it.
+
+Example:
+
+<th scope="row">Jordan Parker</th>
+
+
+MENTAL MODEL
+------------
+
+scope="col"
+
+        ↓
+        ↓
+
+Data below the header
+
+
+scope="row"
+
+        → → →
+
+Data beside the header
+
+
+ACCESSIBLE FORMS
+================
+
+Every form control should have an accessible name.
+
+For normal form fields, the preferred solution is usually a native
+<label> element.
+
+
+LABEL AND INPUT RELATIONSHIP
+----------------------------
+
+Example:
+
+<label for="email">
+    Email Address
+</label>
+
+<input
+    type="email"
+    id="email"
+    name="email"
+>
+
+
+Relationship:
+
+label for="email"
+
+        ↓
+
+input id="email"
+
+
+The values must match.
+
+
+WHY LABELS MATTER
+-----------------
+
+Labels help users understand what information belongs in a form field.
+
+They also improve interaction because clicking the label can focus or
+activate the associated form control.
+
+
+PLACEHOLDERS ARE NOT LABELS
+---------------------------
+
+Do not rely on placeholder text as the only description of an input.
+
+Bad:
+
+<input
+    type="email"
+    placeholder="Email Address"
+>
+
+
+Better:
+
+<label for="email">
+    Email Address
+</label>
+
+<input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="name@example.com"
+>
+
+
+The label identifies the field.
+
+The placeholder may provide an example or hint.
+
+
+WAI-ARIA
+========
+
+WAI-ARIA stands for:
+
+Web Accessibility Initiative -
+Accessible Rich Internet Applications
+
+
+ARIA provides attributes that can communicate additional accessibility
+information to assistive technologies.
+
+
+IMPORTANT ARIA RULE
+-------------------
+
+Use native semantic HTML whenever possible.
+
+Prefer:
+
+<button>
+    Register
+</button>
+
+over attempting to recreate a button using:
+
+<div role="button">
+    Register
+</div>
+
+
+Native HTML already provides:
+
+- semantics
+- keyboard behavior
+- browser behavior
+- accessibility information
+
+
+ARIA should generally supplement HTML rather than replace good HTML.
+
+
+ARIA ROLES
+==========
+
+The role attribute can describe the purpose of an element.
+
+Example:
+
+role="button"
+
+
+Some categories of ARIA roles include:
+
+- document structure roles
+- widget roles
+- landmark roles
+- live region roles
+- window roles
+- abstract roles
+
+
+DOCUMENT STRUCTURE ROLES
+------------------------
+
+Describe structural parts of content.
+
+
+WIDGET ROLES
+------------
+
+Describe interactive user interface components.
+
+
+LANDMARK ROLES
+--------------
+
+Identify major areas of a webpage.
+
+Examples of native HTML elements that already create useful landmarks:
+
+<header>
+<nav>
+<main>
+<footer>
+
+
+When native elements already provide the correct semantics, additional
+ARIA roles are usually unnecessary.
+
+
+LIVE REGION ROLES
+-----------------
+
+Used for areas whose content can change dynamically and may need to be
+announced to assistive technology.
+
+
+WINDOW ROLES
+------------
+
+Describe window-like interface elements such as dialogs.
+
+
+ABSTRACT ROLES
+--------------
+
+Used internally as part of ARIA's role model.
+
+Developers should not assign abstract roles directly to elements.
+
+
+ARIA-LABEL
+==========
+
+aria-label provides an accessible name directly.
+
+Example:
+
+<button
+    type="button"
+    aria-label="Search"
+>
+    🔍
+</button>
+
+
+The visible button may contain only a symbol, but assistive technology
+can announce:
+
+Search
+
+
+USE ARIA-LABEL WHEN
+-------------------
+
+An element needs an accessible name and there is no useful visible text
+that can provide that name.
+
+
+IMPORTANT
+---------
+
+The aria-label value should be human-readable.
+
+Good:
+
+aria-label="Registration help"
+
+
+Poor:
+
+aria-label="registration-help-button-1"
+
+
+Remember:
+
+The value may be announced to an actual user.
+
+
+ARIA-LABELLEDBY
+===============
+
+aria-labelledby creates an accessible name using text from another
+element on the page.
+
+Example:
+
+<section aria-labelledby="registration-heading">
+
+    <h2 id="registration-heading">
+        Workshop Registration
+    </h2>
+
+</section>
+
+
+Relationship:
+
+section
+
+aria-labelledby="registration-heading"
+
+        ↓
+
+id="registration-heading"
+
+
+The visible heading becomes the accessible name for the section.
+
+
+ARIA-LABEL VS ARIA-LABELLEDBY
+-----------------------------
+
+aria-label
+
+Accessible name is written directly in the attribute.
+
+
+aria-labelledby
+
+Accessible name comes from another element.
+
+
+MENTAL MODEL
+------------
+
+No useful visible label exists:
+
+aria-label
+
+
+Useful visible text already exists:
+
+aria-labelledby
+
+
+NATIVE LABEL ALREADY EXISTS:
+
+Do not add unnecessary ARIA.
+
+
+Example:
+
+<label for="name">Name</label>
+<input id="name" name="name">
+
+
+The input already has an accessible name.
+
+You normally do NOT need:
+
+aria-label="Name"
+
+or:
+
+aria-labelledby="..."
+
+
+ARIA-HIDDEN
+===========
+
+aria-hidden="true"
+
+removes an element from the accessibility tree.
+
+The content may still remain visually displayed.
+
+
+DECORATIVE CONTENT
+------------------
+
+Example:
+
+<button type="button">
+
+    <span aria-hidden="true">
+        →
+    </span>
+
+    Continue
+
+</button>
+
+
+The arrow is decorative.
+
+The word:
+
+Continue
+
+already communicates the button's purpose.
+
+
+OTHER EXAMPLES
+--------------
+
+Decorative stars:
+
+<span aria-hidden="true">★</span>
+
+
+Decorative calendar symbol:
+
+<span aria-hidden="true">📅</span>
+
+September 22, 2026
+
+
+The actual date still communicates the information.
+
+
+DO NOT HIDE MEANINGFUL INFORMATION
+----------------------------------
+
+Bad idea:
+
+<span aria-hidden="true">
+    Warning:
+</span>
+
+
+If "Warning" communicates important meaning, assistive technology
+should normally be able to access it.
+
+
+DO NOT HIDE INTERACTIVE CONTENT
+-------------------------------
+
+Avoid placing:
+
+aria-hidden="true"
+
+on:
+
+- links
+- buttons
+- inputs
+- other focusable interactive controls
+
+
+ARIA-DESCRIBEDBY
+================
+
+aria-describedby associates an element with additional descriptive
+information.
+
+
+Example:
+
+<label for="password">
+    Password
+</label>
+
+<input
+    type="password"
+    id="password"
+    name="password"
+    aria-describedby="password-help"
+>
+
+<p id="password-help">
+    Password must contain at least eight characters.
+</p>
+
+
+Relationship:
+
+input
+
+aria-describedby="password-help"
+
+        ↓
+
+p id="password-help"
+
+
+NAME VS DESCRIPTION
+-------------------
+
+The label answers:
+
+"What is this control?"
+
+
+Example:
+
+Password
+
+
+aria-describedby answers:
+
+"What additional information should I know about this control?"
+
+
+Example:
+
+Password must contain at least eight characters.
+
+
+MENTAL MODEL
+------------
+
+<label>
+    ↓
+ACCESSIBLE NAME
+
+
+aria-describedby
+    ↓
+ACCESSIBLE DESCRIPTION
+
+
+ALT TEXT
+========
+
+The alt attribute provides a text alternative for an image.
+
+
+INFORMATIVE IMAGES
+------------------
+
+If an image communicates useful information, give it meaningful alt
+text.
+
+Example:
+
+<img
+    src="conference-room.jpg"
+    alt="Attendees seated at tables during a web accessibility workshop"
+>
+
+
+Good alt text communicates the important meaning or purpose of the
+image.
+
+
+AVOID REDUNDANT PHRASES
+-----------------------
+
+Usually avoid phrases such as:
+
+Image of...
+Picture of...
+Photo of...
+
+
+Screen readers already know the element is an image.
+
+
+DECORATIVE IMAGES
+-----------------
+
+If an image is purely decorative and provides no useful information,
+use an empty alt attribute:
+
+alt=""
+
+
+Example:
+
+<img
+    src="decorative-divider.png"
+    alt=""
+>
+
+
+Do not simply omit alt from an image that should intentionally be
+ignored.
+
+
+CONTEXT MATTERS
+---------------
+
+The same image may need different alt text depending on why it appears
+on the page.
+
+Ask:
+
+"What information would someone lose if they could not see this image?"
+
+
+ACCESSIBLE LINK TEXT
+====================
+
+Link text should clearly describe the destination or purpose of the
+link.
+
+
+POOR LINK TEXT
+--------------
+
+Click here
+
+Read more
+
+Learn more
+
+More
+
+Download
+
+
+These phrases may make little sense when read without surrounding
+content.
+
+
+BETTER LINK TEXT
+----------------
+
+Workshop agenda
+
+Download the accessibility checklist
+
+Learn about accessible HTML
+
+W3C web accessibility guidance
+
+Email the workshop team
+
+
+LINKS OUT OF CONTEXT
+--------------------
+
+Screen reader users may navigate through a list of links without
+hearing the surrounding paragraphs.
+
+Ask:
+
+"If I heard only this link text, would I understand what the link does
+or where it goes?"
+
+
+AVOID
+-----
+
+Avoid adding unnecessary phrases such as:
+
+Link to...
+
+Click this link to...
+
+
+The anchor element already communicates that the content is a link.
+
+
+ACCESSIBLE AUDIO AND VIDEO
+==========================
+
+Multimedia content should provide alternatives for users who cannot
+hear or see parts of the media.
+
+
+AUDIO
+-----
+
+For meaningful spoken audio, provide a text transcript.
+
+A transcript should contain the important information that is actually
+spoken.
+
+A sentence saying:
+
+"This audio discusses accessibility."
+
+is NOT equivalent to the actual spoken content.
+
+
+VIDEO CAPTIONS
+--------------
+
+Captions provide text for spoken dialogue and important sounds.
+
+HTML video can use the <track> element.
+
+Example structure:
+
+<video controls>
+
+    <source
+        src="training.mp4"
+        type="video/mp4"
+    >
+
+    <track
+        src="training-en.vtt"
+        kind="captions"
+        srclang="en"
+        label="English"
+        default
+    >
+
+    Your browser does not support the video element.
+
+</video>
+
+
+IMPORTANT TRACK ATTRIBUTES
+--------------------------
+
+src
+Location of the text track file.
+
+kind
+Identifies the type of track.
+
+Example:
+
+kind="captions"
+
+
+srclang
+Identifies the language.
+
+Example:
+
+srclang="en"
+
+
+label
+Human-readable name for the track.
+
+Example:
+
+label="English"
+
+
+default
+Makes that track the initially preferred track.
+
+
+TRANSCRIPTS
+-----------
+
+A transcript provides the media content as readable text.
+
+Transcripts are especially important for audio-only content.
+
+
+AUDIO DESCRIPTIONS
+------------------
+
+Video may also require descriptions of important visual information
+that cannot be understood from the audio alone.
+
+
+NATIVE MEDIA CONTROLS
+---------------------
+
+Use:
+
+controls
+
+when users need to operate audio or video.
+
+Example:
+
+<audio controls>
+
+<video controls>
+
+
+Native controls provide established playback functionality.
+
+
+KEYBOARD ACCESSIBILITY
+======================
+
+A webpage should be usable without requiring a mouse.
+
+Users should normally be able to navigate interactive elements using:
+
+Tab
+Shift + Tab
+Enter
+Space
+
+
+NATURALLY FOCUSABLE ELEMENTS
+----------------------------
+
+Native interactive HTML elements normally participate in keyboard
+navigation automatically.
+
+Examples:
+
+<a href="...">
+
+<button>
+
+<input>
+
+<select>
+
+<textarea>
+
+
+These generally do NOT require tabindex simply to become keyboard
+accessible.
+
+
+TABINDEX
+========
+
+The tabindex attribute controls whether an element can receive focus
+and how it participates in keyboard navigation.
+
+
+TABINDEX="0"
+------------
+
+Makes an element participate in the normal sequential tab order.
+
+Example:
+
+<div tabindex="0">
+    ...
+</div>
+
+
+Use carefully.
+
+Do not make ordinary static content focusable without a good reason.
+
+
+TABINDEX="-1"
+-------------
+
+Allows an element to receive programmatic focus but removes it from
+normal sequential Tab navigation.
+
+Example:
+
+<p tabindex="-1">
+    Sorry, there was an error with your submission.
+</p>
+
+
+This can be useful when focus needs to be moved to an element through
+application behavior without making it a normal tab stop.
+
+
+POSITIVE TABINDEX
+-----------------
+
+Avoid:
+
+tabindex="1"
+
+tabindex="2"
+
+tabindex="3"
+
+
+Positive values manually override the natural keyboard order and can
+create confusing navigation.
+
+
+BEST PRACTICE
+-------------
+
+Prefer:
+
+good document order
++
+native HTML
++
+natural browser tab order
+
+
+Instead of manually numbering every interactive element.
+
+
+EXAMPLE OF A GOOD NATURAL TAB ORDER
+-----------------------------------
+
+nav link
+    ↓
+nav link
+    ↓
+name input
+    ↓
+email input
+    ↓
+submit button
+    ↓
+contact link
+
+
+No positive tabindex values are necessary.
+
+
+ACCESSKEY
+=========
+
+The accesskey attribute can define a keyboard shortcut for an element.
+
+Example:
+
+<button accesskey="s">
+    Save
+</button>
+
+
+Another example:
+
+<a href="/" accesskey="h">
+    Home
+</a>
+
+
+Accessibility shortcut behavior can vary between browsers and
+operating systems, so use accesskey carefully.
+
+
+SEMANTIC HTML AND ACCESSIBILITY
+===============================
+
+Accessibility frequently starts with choosing the correct HTML element.
+
+Examples:
+
+Need a button?
+→ use <button>
+
+Need navigation?
+→ use <nav>
+
+Need the main page content?
+→ use <main>
+
+Need a page heading?
+→ use <h1>
+
+Need a form label?
+→ use <label>
+
+Need tabular data?
+→ use <table>
+
+Need contact information?
+→ consider <address>
+
+Need a list?
+→ use <ul> or <ol>
+
+
+Native HTML gives browsers and assistive technologies useful semantic
+information automatically.
+
+
+ACCESSIBILITY AUDIT WORKFLOW
+============================
+
+A practical workflow:
+
+Build page
+
+    ↓
+
+Validate HTML
+
+    ↓
+
+Open page in browser
+
+    ↓
+
+Inspect DOM with DevTools
+
+    ↓
+
+Run accessibility audit
+
+    ↓
+
+Test keyboard navigation
+
+    ↓
+
+Check headings and landmarks
+
+    ↓
+
+Check forms and labels
+
+    ↓
+
+Check images and alt text
+
+    ↓
+
+Check tables
+
+    ↓
+
+Check links
+
+    ↓
+
+Check ARIA
+
+    ↓
+
+Check multimedia alternatives
+
+    ↓
+
+Fix source HTML
+
+    ↓
+
+Retest
+
+
+AUTOMATED TESTING LIMITATIONS
+=============================
+
+An automated audit may tell you:
+
+- an image has no alt attribute
+- a form control has no label
+- heading levels are problematic
+- ARIA references are invalid
+- color contrast is insufficient
+- certain landmark problems exist
+
+
+But an automated tool cannot always determine whether:
+
+- alt text is actually useful
+- link wording makes sense
+- heading wording accurately describes content
+- tab order feels logical
+- ARIA was the correct solution
+- a transcript accurately represents an audio recording
+
+
+Human review is still necessary.
+
+
+ACCESSIBILITY QUICK REFERENCE
+=============================
+
+WCAG
+Web Content Accessibility Guidelines
+
+
+POUR
+Perceivable
+Operable
+Understandable
+Robust
+
+
+<label>
+Accessible name for a form control
+
+
+alt
+Text alternative for an image
+
+
+scope="col"
+Header describes cells below it
+
+
+scope="row"
+Header describes cells beside it
+
+
+aria-label
+Provides an accessible name directly
+
+
+aria-labelledby
+Uses another element's text as the accessible name
+
+
+aria-describedby
+Associates additional descriptive information
+
+
+aria-hidden="true"
+Removes content from the accessibility tree
+
+
+controls
+Provides native audio/video playback controls
+
+
+<track>
+Provides captions or other timed text for media
+
+
+tabindex="0"
+Adds an element to normal keyboard navigation
+
+
+tabindex="-1"
+Removes an element from sequential Tab navigation while allowing
+programmatic focus
+
+
+tabindex greater than 0
+Avoid
+
+
+accesskey
+Provides a keyboard shortcut
+
+
+MAIN ACCESSIBILITY RULES
+========================
+
+1. USE NATIVE HTML FIRST
+
+Do not recreate native functionality with ARIA when HTML already has
+the correct element.
+
+
+2. PROVIDE ACCESSIBLE NAMES
+
+Users need to know what controls do.
+
+
+3. PROVIDE ACCESSIBLE DESCRIPTIONS WHEN NEEDED
+
+Instructions and help text should be programmatically associated with
+the correct controls.
+
+
+4. DO NOT HIDE MEANINGFUL INFORMATION
+
+Use aria-hidden only when removing the content from the accessibility
+tree does not remove important meaning.
+
+
+5. WRITE DESCRIPTIVE LINK TEXT
+
+Links should make sense without surrounding context.
+
+
+6. PROVIDE TEXT ALTERNATIVES
+
+Images, audio, and video should have appropriate alternatives.
+
+
+7. PRESERVE KEYBOARD ACCESS
+
+Users should be able to reach and operate interactive content without
+a mouse.
+
+
+8. USE LOGICAL HEADINGS
+
+Headings describe document structure, not visual formatting.
+
+
+9. BUILD ACCESSIBLE TABLE RELATIONSHIPS
+
+Use headers, scope, captions, and proper table structure.
+
+
+10. TEST ACCESSIBILITY
+
+Do not assume valid HTML automatically means a page is fully
+accessible.
+
+
+FINAL MENTAL MODEL
+==================
+
+Good accessibility usually begins with:
+
+Semantic HTML
+      +
+Logical document structure
+      +
+Accessible names
+      +
+Accessible descriptions
+      +
+Text alternatives
+      +
+Keyboard support
+      +
+Appropriate ARIA
+      +
+Testing
+
+
+KEY TAKEAWAY
+============
+
+Accessibility is not a single HTML attribute or tool.
+
+It is the practice of building webpages so users can perceive,
+understand, navigate, and operate the content using different devices,
+input methods, and assistive technologies.
+
+Start with native semantic HTML.
+
+Add ARIA only when it provides accessibility information that native
+HTML does not already provide.
+
+Then test the finished experience rather than assuming the markup alone
+is sufficient.
+
+
+HTML REVIEW
+===========
+
+RESPONSIVE WEB DESIGN — HTML REVIEW NOTES
+
+
+HTML BASICS
+===========
+
+HTML
+----
+
+HTML stands for:
+
+HyperText Markup Language
+
+HTML defines the structure and meaning of webpage content.
+
+HTML is responsible primarily for:
+
+- page structure
+- content organization
+- semantic meaning
+
+CSS is primarily responsible for presentation.
+
+JavaScript is primarily responsible for behavior and interactivity.
+
+
+HTML ELEMENTS
+-------------
+
+HTML elements represent content on a webpage.
+
+Most HTML elements consist of:
+
+opening tag
++
+content
++
+closing tag
+
+
+Example:
+
+<p>Hello world</p>
+
+
+Structure:
+
+<p>
+    ↓
+opening tag
+
+Hello world
+    ↓
+content
+
+</p>
+    ↓
+closing tag
+
+
+COMMON HTML ELEMENTS
+--------------------
+
+Heading:
+
+<h1>Page Title</h1>
+
+
+Paragraph:
+
+<p>This is a paragraph.</p>
+
+
+Generic container:
+
+<div>
+    Content
+</div>
+
+
+Button:
+
+<button type="button">
+    Open Menu
+</button>
+
+
+DIV ELEMENT
+-----------
+
+<div>
+
+The div element is a generic container.
+
+It does NOT provide special semantic meaning.
+
+Use a div when:
+
+- grouping content is necessary
+- no more appropriate semantic HTML element exists
+
+
+Do not automatically use div for everything.
+
+Prefer semantic elements when they accurately describe the content.
+
+
+VOID ELEMENTS
+=============
+
+Void elements do not have closing tags.
+
+Examples:
+
+<img>
+
+<input>
+
+<meta>
+
+<link>
+
+<br>
+
+<hr>
+
+<source>
+
+<track>
+
+
+Example:
+
+<img
+    src="cat.jpg"
+    alt="Orange cat sleeping on a chair"
+>
+
+
+Do NOT write:
+
+<img></img>
+
+
+HTML ATTRIBUTES
+===============
+
+Attributes provide additional information or behavior for HTML
+elements.
+
+General syntax:
+
+<element attribute="value">
+
+
+Example:
+
+<a href="https://example.com">
+    Visit Example
+</a>
+
+
+Common attributes include:
+
+id
+class
+href
+src
+alt
+name
+type
+value
+required
+disabled
+readonly
+title
+lang
+
+
+BOOLEAN ATTRIBUTES
+------------------
+
+Some attributes represent true/false states.
+
+Examples:
+
+required
+
+disabled
+
+readonly
+
+checked
+
+selected
+
+controls
+
+default
+
+muted
+
+
+For example:
+
+<input type="text" required>
+
+
+The presence of required means the attribute is enabled.
+
+
+IDS AND CLASSES
+===============
+
+ID
+--
+
+The id attribute uniquely identifies an element within a document.
+
+Example:
+
+<section id="registration">
+
+An id should normally appear only once on a page.
+
+
+IDs are useful for:
+
+- internal links
+- label relationships
+- ARIA relationships
+- CSS targeting
+- JavaScript targeting
+
+
+Example internal relationship:
+
+<a href="#contact">Contact</a>
+
+<section id="contact">
+    ...
+</section>
+
+
+ID VALUES
+---------
+
+IDs cannot contain spaces.
+
+Multiple words are commonly separated with:
+
+-
+
+Example:
+
+id="contact-information"
+
+
+Underscores may also be used in valid id values.
+
+
+CLASS
+-----
+
+The class attribute groups elements together.
+
+Unlike an id, the same class can be used on multiple elements.
+
+Example:
+
+<p class="important">
+    ...
+</p>
+
+<p class="important">
+    ...
+</p>
+
+
+An element can also contain multiple classes:
+
+class="card featured"
+
+
+HTML ENTITIES
+=============
+
+HTML entities allow special characters to be represented safely in
+HTML.
+
+Examples:
+
+&amp;
+→ &
+
+
+&lt;
+→ <
+
+
+&gt;
+→ >
+
+
+&quot;
+→ "
+
+
+Useful when a character could otherwise be interpreted as HTML markup.
+
+
+HTML BOILERPLATE
+================
+
+A basic HTML document generally begins with:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    ...
+</head>
+
+<body>
+    ...
+</body>
+
+</html>
+
+
+DOCTYPE
+-------
+
+<!DOCTYPE html>
+
+Tells the browser that the document uses modern HTML.
+
+
+HTML ELEMENT
+------------
+
+<html>
+
+The root element containing the HTML document.
+
+
+LANG ATTRIBUTE
+--------------
+
+Example:
+
+<html lang="en">
+
+
+Identifies the primary language of the page.
+
+This helps:
+
+- screen readers
+- translation tools
+- search engines
+- browsers
+
+
+HEAD ELEMENT
+------------
+
+<head>
+
+Contains document metadata and resources that generally are not
+displayed as normal page content.
+
+
+BODY ELEMENT
+------------
+
+<body>
+
+Contains the content presented to the user.
+
+
+CHARACTER ENCODING
+==================
+
+UTF-8 is commonly used for HTML documents.
+
+Example:
+
+<meta charset="UTF-8">
+
+
+UTF-8 supports a very large collection of international characters
+and symbols.
+
+
+VIEWPORT META TAG
+=================
+
+Common responsive-webpage metadata:
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+
+This helps pages render appropriately on different screen sizes.
+
+
+TITLE ELEMENT
+=============
+
+<title>
+
+Defines the document title.
+
+Example:
+
+<title>Community Workshop</title>
+
+
+The title commonly appears in:
+
+- browser tabs
+- bookmarks
+- search engine results
+
+
+META DESCRIPTION
+================
+
+A description meta tag provides a short description of the webpage.
+
+Example:
+
+<meta
+    name="description"
+    content="Registration information for a community HTML workshop."
+>
+
+
+A useful meta description can help search engines understand and
+present a page.
+
+
+OPEN GRAPH TAGS
+===============
+
+Open Graph metadata can control how a webpage appears when shared on
+social media or messaging platforms.
+
+Common Open Graph properties include:
+
+og:title
+
+og:description
+
+og:image
+
+og:url
+
+
+LINK ELEMENT
+============
+
+<link>
+
+Can associate external resources with the document.
+
+Common use:
+
+<link rel="stylesheet" href="styles.css">
+
+
+SCRIPT ELEMENT
+==============
+
+<script>
+
+Can load or contain JavaScript.
+
+Example:
+
+<script src="script.js"></script>
+
+
+PATHS
+=====
+
+ABSOLUTE PATH / URL
+-------------------
+
+An absolute URL provides the full address to an external resource.
+
+Example:
+
+https://example.com/images/photo.jpg
+
+
+RELATIVE PATH
+-------------
+
+A relative path identifies a resource relative to the current file.
+
+Example:
+
+images/photo.jpg
+
+
+CURRENT DIRECTORY
+-----------------
+
+./
+
+Example:
+
+./images/photo.jpg
+
+
+PARENT DIRECTORY
+----------------
+
+../
+
+Example:
+
+../images/photo.jpg
+
+
+ROOT-RELATIVE PATH
+------------------
+
+A leading slash refers to a path beginning at the site's root.
+
+Example:
+
+/images/photo.jpg
+
+
+ANCHOR ELEMENT
+==============
+
+<a>
+
+Creates a hyperlink.
+
+Example:
+
+<a href="https://example.com">
+    Visit Example
+</a>
+
+
+HREF
+----
+
+The href attribute specifies the destination.
+
+
+INTERNAL LINKS
+--------------
+
+Links can jump to elements on the same page.
+
+Example:
+
+<a href="#registration">
+    Registration
+</a>
+
+
+Destination:
+
+<section id="registration">
+    ...
+</section>
+
+
+The fragment:
+
+#registration
+
+references:
+
+id="registration"
+
+
+MAILTO LINKS
+------------
+
+Example:
+
+<a href="mailto:workshops@example.com">
+    Email the workshop team
+</a>
+
+
+TEL LINKS
+---------
+
+Example:
+
+<a href="tel:+15551234567">
+    Call the workshop team
+</a>
+
+
+TARGET ATTRIBUTE
+================
+
+The target attribute specifies where a linked resource opens.
+
+Important values include:
+
+_self
+_blank
+_parent
+_top
+
+
+_self
+-----
+
+Opens in the current browsing context.
+
+
+_blank
+------
+
+Usually opens in a new tab or window.
+
+
+_parent
+-------
+
+Opens in the parent browsing context.
+
+
+_top
+----
+
+Opens in the top-level browsing context.
+
+
+LINK STATES
+===========
+
+Links can have different interaction states.
+
+Common states include:
+
+unvisited
+
+visited
+
+hover
+
+focus
+
+active
+
+
+CSS can later style these states differently.
+
+
+IMAGES
+======
+
+The <img> element embeds an image.
+
+Example:
+
+<img
+    src="photo.jpg"
+    alt="Students working together at a web development workshop"
+>
+
+
+SRC
+---
+
+Specifies the image resource.
+
+
+ALT
+---
+
+Provides a text alternative.
+
+Alt text is important for accessibility.
+
+
+INFORMATIVE IMAGE
+-----------------
+
+Provide meaningful alt text.
+
+Example:
+
+alt="Instructor demonstrating HTML on a projector"
+
+
+DECORATIVE IMAGE
+----------------
+
+Use:
+
+alt=""
+
+
+when an image provides no meaningful information and should be ignored
+by assistive technology.
+
+
+REPLACED ELEMENTS
+=================
+
+Some HTML elements are replaced by external content.
+
+Common examples include:
+
+<img>
+
+<video>
+
+<iframe>
+
+<embed>
+
+
+The browser displays the external resource in place of the element.
+
+
+IMAGE FORMATS
+=============
+
+Common web image formats include:
+
+JPEG / JPG
+
+PNG
+
+GIF
+
+SVG
+
+WebP
+
+AVIF
+
+
+Different formats have different strengths.
+
+For example:
+
+JPEG
+→ often useful for photographs
+
+PNG
+→ supports transparency
+
+SVG
+→ scalable vector graphics
+
+WebP / AVIF
+→ modern formats designed for efficient web delivery
+
+
+SVG
+===
+
+SVG stands for:
+
+Scalable Vector Graphics
+
+SVG graphics can scale without losing sharpness because they are based
+on vector shapes rather than a fixed pixel grid.
+
+
+MEDIA LICENSING
+===============
+
+Images and other media may be protected by copyright.
+
+Before using media, confirm you have permission or that its license
+allows your intended use.
+
+
+AUDIO
+=====
+
+The <audio> element embeds audio.
+
+Example:
+
+<audio controls>
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg"
+    >
+
+    Your browser does not support the audio element.
+
+</audio>
+
+
+VIDEO
+=====
+
+The <video> element embeds video.
+
+Example:
+
+<video controls>
+
+    <source
+        src="training.mp4"
+        type="video/mp4"
+    >
+
+    Your browser does not support the video element.
+
+</video>
+
+
+COMMON MEDIA ATTRIBUTES
+=======================
+
+controls
+--------
+
+Provides native playback controls.
+
+
+autoplay
+--------
+
+Requests that playback begin automatically.
+
+Autoplay should be used carefully because unexpected media playback
+can create usability and accessibility problems.
+
+
+loop
+----
+
+Repeats the media after it finishes.
+
+
+muted
+-----
+
+Starts the media without sound.
+
+
+poster
+------
+
+Video only.
+
+Provides an image displayed before playback begins.
+
+Example:
+
+<video poster="preview.jpg">
+
+
+SOURCE ELEMENT
+==============
+
+<source>
+
+Allows media resources to be specified inside audio or video
+elements.
+
+Example:
+
+<source
+    src="training.mp4"
+    type="video/mp4"
+>
+
+
+IFRAME
+======
+
+<iframe>
+
+Embeds another webpage or external resource within the current page.
+
+Commonly used for embedded videos and maps.
+
+Example:
+
+<iframe
+    src="..."
+    title="Introduction to HTML video"
+></iframe>
+
+
+An iframe should have a meaningful title when necessary for
+accessibility.
+
+
+SEMANTIC HTML
+=============
+
+Semantic HTML uses elements whose names communicate the purpose or
+meaning of their content.
+
+Examples:
+
+<header>
+
+<nav>
+
+<main>
+
+<section>
+
+<article>
+
+<aside>
+
+<footer>
+
+
+Semantic HTML benefits:
+
+- accessibility
+- readability
+- maintainability
+- search engines
+- assistive technologies
+
+
+HEADER
+------
+
+<header>
+
+Represents introductory content for a page or section.
+
+
+NAV
+---
+
+<nav>
+
+Represents a major group of navigation links.
+
+
+MAIN
+----
+
+<main>
+
+Represents the primary content of the document.
+
+A page generally has one main content region.
+
+
+SECTION
+-------
+
+<section>
+
+Groups related content into a thematic section.
+
+Sections commonly have headings.
+
+
+ARTICLE
+-------
+
+<article>
+
+Represents self-contained content that can make sense independently.
+
+Examples:
+
+- blog post
+- news story
+- forum post
+- product review
+
+
+ASIDE
+-----
+
+<aside>
+
+Represents related or supplementary content.
+
+
+FOOTER
+------
+
+<footer>
+
+Represents footer information for a page or section.
+
+
+HEADING HIERARCHY
+=================
+
+HTML provides:
+
+<h1>
+<h2>
+<h3>
+<h4>
+<h5>
+<h6>
+
+
+<h1>
+
+represents the highest heading level.
+
+<h6>
+
+represents the lowest.
+
+
+Choose heading levels based on document structure, not appearance.
+
+
+Example:
+
+<h1>Web Development Conference</h1>
+
+<h2>Schedule</h2>
+
+<h3>Morning Sessions</h3>
+
+<h3>Afternoon Sessions</h3>
+
+<h2>Registration</h2>
+
+
+Avoid skipping heading levels without a structural reason.
+
+Logical heading structure helps assistive technology users understand
+and navigate the page.
+
+
+PRESENTATIONAL VS SEMANTIC HTML
+===============================
+
+Older HTML sometimes used elements primarily to control appearance.
+
+Examples of deprecated presentational elements include:
+
+<center>
+
+<font>
+
+<big>
+
+
+Modern HTML should describe structure and meaning.
+
+CSS should control visual presentation.
+
+
+TEXT SEMANTICS
+==============
+
+EM
+--
+
+<em>
+
+Represents stress emphasis.
+
+Example:
+
+<p>
+    You <em>must</em> submit the form.
+</p>
+
+
+STRONG
+------
+
+<strong>
+
+Represents strong importance.
+
+Example:
+
+<strong>Warning:</strong>
+
+
+I
+-
+
+<i>
+
+Represents text set apart for reasons such as:
+
+- idiomatic expression
+- technical term
+- alternative voice
+- foreign phrase
+
+
+It does not mean:
+
+"make this text visually italic."
+
+
+If you only want visual italics, CSS is more appropriate.
+
+
+B
+-
+
+<b>
+
+Draws attention to text without indicating increased importance.
+
+It does not provide the same meaning as <strong>.
+
+
+BLOCKQUOTE
+==========
+
+<blockquote>
+
+Represents a longer quotation from another source.
+
+Example:
+
+<blockquote cite="https://example.com">
+    ...
+</blockquote>
+
+
+Q
+=
+
+<q>
+
+Represents a short inline quotation.
+
+Example:
+
+<p>
+    The instructor said,
+    <q>Use semantic HTML first.</q>
+</p>
+
+
+ABBR
+====
+
+<abbr>
+
+Represents an abbreviation.
+
+Example:
+
+<abbr title="HyperText Markup Language">
+    HTML
+</abbr>
+
+
+ADDRESS
+=======
+
+<address>
+
+Represents contact information associated with a person, organization,
+article, or page.
+
+Example:
+
+<address>
+    Atlanta Web Skills Conference<br>
+    Atlanta, GA
+</address>
+
+
+BR
+==
+
+<br>
+
+Creates a line break.
+
+Useful for content where the line break itself is meaningful, such as
+a physical address.
+
+Do not use repeated <br> elements merely to create page spacing.
+
+
+TIME
+====
+
+<time>
+
+Represents a date and/or time.
+
+Example:
+
+<time datetime="2026-09-18">
+    September 18, 2026
+</time>
+
+
+Machine-readable value:
+
+datetime="2026-09-18"
+
+
+Date and time:
+
+<time datetime="2026-09-18T09:00">
+    September 18, 2026 at 9:00 AM
+</time>
+
+
+SUPERSCRIPT
+===========
+
+<sup>
+
+Represents superscript text.
+
+Example:
+
+x<sup>2</sup>
+
+
+SUBSCRIPT
+=========
+
+<sub>
+
+Represents subscript text.
+
+Example:
+
+H<sub>2</sub>O
+
+
+CODE
+====
+
+<code>
+
+Represents a fragment of computer code.
+
+Example:
+
+<p>
+    Use the <code>&lt;p&gt;</code> element for paragraphs.
+</p>
+
+
+PRE
+===
+
+<pre>
+
+Preserves whitespace and line breaks.
+
+Often combined with <code> for multi-line examples.
+
+Example:
+
+<pre><code>&lt;h1&gt;Hello&lt;/h1&gt;
+&lt;p&gt;Welcome.&lt;/p&gt;</code></pre>
+
+
+U
+=
+
+<u>
+
+Represents text with a non-textual annotation.
+
+One possible use is marking a misspelled word.
+
+It should not simply be used because you want underlined text.
+
+
+S
+=
+
+<s>
+
+Represents information that is no longer accurate or relevant.
+
+Example:
+
+<s>$49.99</s>
+
+$29.99
+
+
+RUBY
+====
+
+<ruby>
+
+Used for ruby annotations, commonly for pronunciation information in
+East Asian typography.
+
+Related elements include:
+
+<rt>
+
+<rp>
+
+
+DESCRIPTION LISTS
+=================
+
+<dl>
+
+Description list.
+
+
+<dt>
+
+Term.
+
+
+<dd>
+
+Description of the term.
+
+
+Example:
+
+<dl>
+
+    <dt>HTML</dt>
+
+    <dd>
+        HyperText Markup Language
+    </dd>
+
+</dl>
+
+
+HTML FORMS
+==========
+
+<form>
+
+Creates a form for collecting user input.
+
+
+Example:
+
+<form
+    action="https://example.com/register"
+    method="get"
+>
+
+    ...
+
+</form>
+
+
+ACTION
+------
+
+Specifies where form data is sent.
+
+
+METHOD
+------
+
+Specifies the HTTP method used to send the data.
+
+Common methods:
+
+GET
+
+POST
+
+
+INPUT
+=====
+
+<input>
+
+Creates a form control.
+
+Common input types include:
+
+text
+
+email
+
+password
+
+number
+
+radio
+
+checkbox
+
+date
+
+submit
+
+reset
+
+button
+
+
+TEXT INPUT
+----------
+
+<input type="text">
+
+
+EMAIL INPUT
+-----------
+
+<input type="email">
+
+
+Browsers can perform basic email-format validation.
+
+
+PASSWORD INPUT
+--------------
+
+<input type="password">
+
+
+NUMBER INPUT
+------------
+
+<input type="number">
+
+
+RADIO INPUT
+-----------
+
+<input type="radio">
+
+
+CHECKBOX
+--------
+
+<input type="checkbox">
+
+
+INPUT ATTRIBUTES
+================
+
+ID
+--
+
+Identifies the element in the document.
+
+
+NAME
+----
+
+Identifies the submitted form field.
+
+Example:
+
+<input
+    id="email"
+    name="email"
+    type="email"
+>
+
+
+When submitted, the name becomes the field's key.
+
+
+PLACEHOLDER
+-----------
+
+Displays hint text inside an input.
+
+Example:
+
+placeholder="name@example.com"
+
+
+A placeholder should not replace a proper label.
+
+
+VALUE
+-----
+
+Defines the control's value.
+
+Example:
+
+value="yes"
+
+
+For certain button inputs, it can also define visible button text.
+
+
+REQUIRED
+--------
+
+Makes a control required before form submission.
+
+Example:
+
+<input type="email" required>
+
+
+MIN AND MAX
+-----------
+
+Define allowed numerical ranges.
+
+Example:
+
+<input
+    type="number"
+    min="0"
+    max="100"
+>
+
+
+MINLENGTH AND MAXLENGTH
+-----------------------
+
+Define allowed character lengths.
+
+Example:
+
+<input
+    type="text"
+    minlength="5"
+    maxlength="20"
+>
+
+
+LABELS
+======
+
+<label>
+
+Provides an accessible name for a form control.
+
+Example:
+
+<label for="email">
+    Email Address
+</label>
+
+<input
+    type="email"
+    id="email"
+    name="email"
+>
+
+
+Relationship:
+
+for="email"
+      ↓
+id="email"
+
+
+The values must match.
+
+
+RADIO BUTTON GROUPS
+===================
+
+Radio buttons allow one selection from a group.
+
+Example:
+
+<fieldset>
+
+    <legend>
+        Preferred Session
+    </legend>
+
+    <input
+        type="radio"
+        id="morning"
+        name="session"
+        value="morning"
+    >
+    <label for="morning">
+        Morning
+    </label>
+
+    <input
+        type="radio"
+        id="afternoon"
+        name="session"
+        value="afternoon"
+    >
+    <label for="afternoon">
+        Afternoon
+    </label>
+
+</fieldset>
+
+
+Radio buttons in the same group share the same:
+
+name
+
+
+Each should have a unique:
+
+id
+
+value
+
+
+CHECKBOX GROUPS
+===============
+
+Checkboxes allow multiple selections.
+
+Example:
+
+<fieldset>
+
+    <legend>
+        Topics of Interest
+    </legend>
+
+    <input
+        type="checkbox"
+        id="html"
+        name="topics"
+        value="html"
+    >
+    <label for="html">HTML</label>
+
+    <input
+        type="checkbox"
+        id="accessibility"
+        name="topics"
+        value="accessibility"
+    >
+    <label for="accessibility">
+        Accessibility
+    </label>
+
+</fieldset>
+
+
+FIELDSET
+========
+
+<fieldset>
+
+Groups related controls.
+
+
+LEGEND
+======
+
+<legend>
+
+Provides a caption for a fieldset.
+
+
+BUTTONS
+=======
+
+<button>
+
+Creates a native button.
+
+Common button types:
+
+submit
+
+reset
+
+button
+
+
+SUBMIT
+------
+
+<button type="submit">
+    Submit Form
+</button>
+
+
+RESET
+-----
+
+<button type="reset">
+    Reset Form
+</button>
+
+
+GENERIC BUTTON
+--------------
+
+<button type="button">
+    Show Information
+</button>
+
+
+Specify button type explicitly when possible.
+
+
+SELECT
+======
+
+<select>
+
+Creates a selection list.
+
+
+OPTION
+======
+
+<option>
+
+Represents a choice inside a select.
+
+Example:
+
+<label for="platform">
+    Platform
+</label>
+
+<select
+    id="platform"
+    name="platform"
+>
+
+    <option value="pc">
+        PC
+    </option>
+
+    <option value="switch">
+        Nintendo Switch
+    </option>
+
+</select>
+
+
+SELECTED
+--------
+
+Sets an option as initially selected.
+
+Example:
+
+<option value="pc" selected>
+    PC
+</option>
+
+
+TEXTAREA
+========
+
+<textarea>
+
+Creates a multi-line text field.
+
+Example:
+
+<label for="comments">
+    Comments
+</label>
+
+<textarea
+    id="comments"
+    name="comments"
+></textarea>
+
+
+FORM STATES
+===========
+
+FOCUSED
+-------
+
+A control is focused when it is currently active for interaction.
+
+Keyboard users commonly move focus using:
+
+Tab
+
+Shift + Tab
+
+
+READONLY
+--------
+
+Prevents editing but generally keeps the field focusable and its value
+available for submission.
+
+Example:
+
+<input
+    type="text"
+    value="ABC123"
+    readonly
+>
+
+
+DISABLED
+--------
+
+Makes the control unavailable for normal interaction.
+
+Disabled controls generally:
+
+- are not focusable
+- cannot be edited
+- are not submitted with the form
+
+
+Example:
+
+<input type="text" disabled>
+
+
+TABLES
+======
+
+Tables represent tabular information.
+
+Use tables for information that naturally belongs in rows and columns.
+
+Do NOT use tables for general page layout.
+
+
+TABLE
+-----
+
+<table>
+
+Contains the table.
+
+
+CAPTION
+-------
+
+<caption>
+
+Provides a title or description for the table.
+
+
+THEAD
+-----
+
+<thead>
+
+Groups table header rows.
+
+
+TBODY
+-----
+
+<tbody>
+
+Groups primary table data.
+
+
+TFOOT
+-----
+
+<tfoot>
+
+Groups summary/footer rows.
+
+
+TR
+--
+
+<tr>
+
+Creates a table row.
+
+
+TH
+--
+
+<th>
+
+Creates a header cell.
+
+
+TD
+--
+
+<td>
+
+Creates an ordinary data cell.
+
+
+EXAMPLE STRUCTURE
+-----------------
+
+<table>
+
+    <caption>
+        Workshop Results
+    </caption>
+
+    <thead>
+
+        <tr>
+            <th>Participant</th>
+            <th>Score</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>Jordan Parker</td>
+            <td>92</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+COLSPAN
+=======
+
+colspan specifies how many columns a cell spans.
+
+Example:
+
+<th colspan="2">
+    Average Score
+</th>
+
+
+ACCESSIBLE TABLE HEADERS
+========================
+
+scope="col"
+
+means the header describes cells below it.
+
+
+Example:
+
+<th scope="col">
+    Score
+</th>
+
+
+scope="row"
+
+means the header describes cells beside it.
+
+
+Example:
+
+<th scope="row">
+    Jordan Parker
+</th>
+
+
+ACCESSIBILITY
+=============
+
+Web accessibility means creating webpages that people with different
+abilities can perceive, understand, navigate, and operate.
+
+
+ASSISTIVE TECHNOLOGIES
+======================
+
+Examples include:
+
+- screen readers
+- screen magnifiers
+- voice recognition software
+- alternative pointing devices
+- specialized keyboards
+
+
+SEMANTIC HTML AND ACCESSIBILITY
+===============================
+
+Correct semantic HTML helps assistive technologies understand:
+
+- headings
+- navigation
+- landmarks
+- tables
+- forms
+- buttons
+- links
+- content relationships
+
+
+ACCESSIBILITY AUDITING
+======================
+
+Accessibility auditing tools can detect many common issues.
+
+Examples may include:
+
+Google Lighthouse
+
+WAVE
+
+IBM Equal Access Accessibility Checker
+
+
+Automated tools cannot identify every accessibility problem.
+
+Manual testing is also important.
+
+
+Useful manual checks include:
+
+- keyboard-only navigation
+- heading hierarchy
+- link wording
+- form labels
+- alt text quality
+- semantic structure
+
+
+WAI-ARIA
+========
+
+WAI-ARIA stands for:
+
+Web Accessibility Initiative —
+Accessible Rich Internet Applications
+
+
+ARIA can provide additional accessibility information when native HTML
+does not provide everything required.
+
+
+IMPORTANT ARIA RULE
+-------------------
+
+Use native HTML first.
+
+Prefer:
+
+<button>Register</button>
+
+
+instead of recreating a button with:
+
+<div role="button">
+    Register
+</div>
+
+
+Native HTML automatically provides important semantics and behaviors.
+
+
+ARIA ROLES
+==========
+
+ARIA roles communicate what an element represents.
+
+Examples include roles such as:
+
+button
+
+menu
+
+tab
+
+alert
+
+
+Do not add an ARIA role when a native HTML element already supplies the
+correct semantics.
+
+
+ARIA-LABEL
+==========
+
+aria-label provides an accessible name directly.
+
+Example:
+
+<button
+    type="button"
+    aria-label="Registration help"
+>
+    ?
+</button>
+
+
+The visible content may only be:
+
+?
+
+but assistive technology receives:
+
+Registration help
+
+
+ARIA-LABELLEDBY
+===============
+
+aria-labelledby gets an accessible name from another element.
+
+Example:
+
+<section
+    aria-labelledby="registration-heading"
+>
+
+    <h2 id="registration-heading">
+        Registration
+    </h2>
+
+</section>
+
+
+Relationship:
+
+aria-labelledby="registration-heading"
+
+              ↓
+
+id="registration-heading"
+
+
+ARIA-LABEL VS ARIA-LABELLEDBY
+-----------------------------
+
+aria-label
+→ write the accessible name directly
+
+
+aria-labelledby
+→ reference existing visible text
+
+
+ARIA-DESCRIBEDBY
+================
+
+aria-describedby associates additional descriptive information with an
+element.
+
+Example:
+
+<label for="card-number">
+    Card Number
+</label>
+
+<input
+    id="card-number"
+    name="card-number"
+    type="text"
+    aria-describedby="card-number-help"
+>
+
+<p id="card-number-help">
+    Enter the 16-digit number without spaces.
+</p>
+
+
+Mental model:
+
+label
+    ↓
+WHAT IS THIS?
+
+
+aria-describedby
+    ↓
+WHAT ELSE SHOULD I KNOW?
+
+
+ARIA-HIDDEN
+===========
+
+aria-hidden="true"
+
+removes an element from the accessibility tree while it may remain
+visible.
+
+
+Good use:
+
+<button type="button">
+
+    <span aria-hidden="true">
+        →
+    </span>
+
+    Continue
+
+</button>
+
+
+The arrow is decorative.
+
+Continue provides the meaningful accessible content.
+
+
+Do not use aria-hidden on meaningful information.
+
+
+Do not put aria-hidden="true" on interactive controls that users need
+to access.
+
+
+ARIA-EXPANDED
+=============
+
+aria-expanded communicates whether an expandable control is currently
+expanded or collapsed.
+
+Common values:
+
+true
+
+false
+
+
+Example concept:
+
+<button aria-expanded="false">
+    Menu
+</button>
+
+
+ARIA-LIVE
+=========
+
+aria-live identifies content whose changes may need to be announced to
+screen-reader users.
+
+Possible uses include:
+
+- status updates
+- changing search results
+- validation messages
+- dynamically updated content
+
+
+ALT TEXT
+========
+
+Informative images need useful alternative text.
+
+Example:
+
+alt="A student typing HTML code on a laptop"
+
+
+Decorative images should generally use:
+
+alt=""
+
+
+Ask:
+
+"What meaningful information would be lost if the user could not see
+this image?"
+
+
+GOOD LINK TEXT
+==============
+
+Link text should explain the link's purpose or destination.
+
+Weak:
+
+Click here
+
+Read more
+
+Learn more
+
+
+Better:
+
+View the workshop schedule
+
+Download the accessibility checklist
+
+Read W3C accessibility guidance
+
+
+A useful test:
+
+"If I heard only the link text, would I understand where it goes?"
+
+
+ACCESSIBLE AUDIO
+================
+
+Meaningful audio content should have a text alternative.
+
+For spoken audio, provide a transcript containing the important spoken
+information.
+
+
+ACCESSIBLE VIDEO
+================
+
+Video with meaningful audio should generally provide captions.
+
+
+TRACK ELEMENT
+=============
+
+<track>
+
+Adds timed text to media.
+
+Example:
+
+<video controls>
+
+    <source
+        src="training.mp4"
+        type="video/mp4"
+    >
+
+    <track
+        src="training-en.vtt"
+        kind="captions"
+        srclang="en"
+        label="English"
+        default
+    >
+
+    Your browser does not support video.
+
+</video>
+
+
+TRACK ATTRIBUTES
+================
+
+src
+---
+
+Location of the text-track file.
+
+
+kind
+----
+
+Type of text track.
+
+Example:
+
+kind="captions"
+
+
+srclang
+-------
+
+Language of the text track.
+
+Example:
+
+srclang="en"
+
+
+label
+-----
+
+Human-readable name.
+
+Example:
+
+label="English"
+
+
+default
+-------
+
+Identifies the preferred default track.
+
+
+TRANSCRIPTS
+===========
+
+A transcript provides spoken media content as readable text.
+
+A short description of what the audio discusses is NOT equivalent to a
+complete transcript.
+
+
+AUDIO DESCRIPTIONS
+==================
+
+Videos may require descriptions of meaningful visual information that
+cannot be understood from the normal audio alone.
+
+
+KEYBOARD ACCESSIBILITY
+======================
+
+Web applications should be usable without a mouse.
+
+Common keyboard controls include:
+
+Tab
+
+Shift + Tab
+
+Enter
+
+Space
+
+
+Native interactive controls are normally keyboard accessible by
+default.
+
+Examples:
+
+<a href="...">
+
+<button>
+
+<input>
+
+<select>
+
+<textarea>
+
+
+TABINDEX
+========
+
+tabindex affects focus behavior.
+
+
+TABINDEX="0"
+------------
+
+Adds an element to the normal sequential tab order.
+
+Use only when there is a real reason for a normally non-focusable
+element to receive keyboard focus.
+
+
+TABINDEX="-1"
+-------------
+
+Allows an element to receive programmatic focus but removes it from
+normal sequential Tab navigation.
+
+
+POSITIVE TABINDEX
+-----------------
+
+Avoid:
+
+tabindex="1"
+
+tabindex="2"
+
+tabindex="3"
+
+
+Positive values manually change keyboard order and can create confusing
+navigation.
+
+
+BEST PRACTICE
+-------------
+
+Prefer:
+
+logical HTML document order
++
+native interactive elements
++
+natural browser focus order
+
+
+ACCESSKEY
+=========
+
+accesskey defines a keyboard shortcut.
+
+Example:
+
+<button accesskey="s">
+    Save
+</button>
+
+
+Browser and operating-system shortcut combinations can vary.
+
+Accesskey should be used carefully because shortcuts can conflict with
+existing browser, assistive-technology, or operating-system shortcuts.
+
+
+HTML VALIDATION
+===============
+
+An HTML validator checks markup against HTML standards.
+
+Validators can detect problems such as:
+
+- malformed markup
+- invalid nesting
+- duplicate IDs
+- invalid attributes
+- incorrect element placement
+
+
+Remember:
+
+A browser may display invalid HTML successfully because browsers attempt
+to recover from mistakes.
+
+
+DOM AND DEVTOOLS
+================
+
+The DOM is the browser's parsed representation of the document.
+
+SOURCE HTML
+-----------
+
+The HTML saved in your file.
+
+
+DOM
+---
+
+The structure the browser created from that HTML.
+
+
+DevTools allows you to:
+
+- inspect elements
+- inspect attributes
+- inspect nesting
+- temporarily edit the DOM
+- investigate accessibility information
+- debug links and IDs
+- test possible fixes
+
+
+DEVTOOLS EDITS
+==============
+
+Changes made directly in DevTools are normally temporary.
+
+Reloading the page rebuilds the DOM from the saved source file.
+
+
+DEBUGGING WORKFLOW
+==================
+
+Write HTML
+
+    ↓
+
+Save
+
+    ↓
+
+Open in browser
+
+    ↓
+
+Inspect with DevTools
+
+    ↓
+
+Test keyboard navigation
+
+    ↓
+
+Run accessibility audit
+
+    ↓
+
+Run HTML validator
+
+    ↓
+
+Correct source
+
+    ↓
+
+Reload
+
+    ↓
+
+Retest
+
+
+HTML QUICK REFERENCE
+====================
+
+<!DOCTYPE html>
+Declares a modern HTML document
+
+
+<html>
+Root element
+
+
+<head>
+Document metadata
+
+
+<body>
+Visible document content
+
+
+<title>
+Page title
+
+
+<meta>
+Metadata
+
+
+<header>
+Introductory content
+
+
+<nav>
+Navigation
+
+
+<main>
+Primary page content
+
+
+<section>
+Thematic grouping
+
+
+<article>
+Self-contained content
+
+
+<aside>
+Related/supplementary content
+
+
+<footer>
+Footer content
+
+
+<h1>–<h6>
+Heading hierarchy
+
+
+<p>
+Paragraph
+
+
+<a>
+Hyperlink
+
+
+<img>
+Image
+
+
+<ul>
+Unordered list
+
+
+<ol>
+Ordered list
+
+
+<li>
+List item
+
+
+<form>
+Form
+
+
+<label>
+Form control label
+
+
+<input>
+Input control
+
+
+<button>
+Button
+
+
+<select>
+Selection list
+
+
+<option>
+Select option
+
+
+<textarea>
+Multi-line input
+
+
+<fieldset>
+Groups form controls
+
+
+<legend>
+Labels a fieldset
+
+
+<table>
+Table
+
+
+<caption>
+Table title
+
+
+<thead>
+Table header group
+
+
+<tbody>
+Table body group
+
+
+<tfoot>
+Table footer group
+
+
+<tr>
+Table row
+
+
+<th>
+Header cell
+
+
+<td>
+Data cell
+
+
+<audio>
+Audio player
+
+
+<video>
+Video player
+
+
+<source>
+Media source
+
+
+<track>
+Timed text track
+
+
+<iframe>
+Embedded external content
+
+
+<code>
+Computer code
+
+
+<pre>
+Preformatted text
+
+
+<blockquote>
+Block quotation
+
+
+<q>
+Inline quotation
+
+
+<abbr>
+Abbreviation
+
+
+<address>
+Contact information
+
+
+<time>
+Date/time
+
+
+<sup>
+Superscript
+
+
+<sub>
+Subscript
+
+
+<em>
+Stress emphasis
+
+
+<strong>
+Strong importance
+
+
+ARIA QUICK REFERENCE
+====================
+
+role
+Defines additional semantic role when necessary
+
+
+aria-label
+Provides an accessible name directly
+
+
+aria-labelledby
+Gets an accessible name from referenced elements
+
+
+aria-describedby
+Associates explanatory text
+
+
+aria-hidden="true"
+Removes content from the accessibility tree
+
+
+aria-expanded
+Communicates expanded/collapsed state
+
+
+aria-live
+Indicates dynamically changing content that may need announcement
+
+
+ACCESSIBILITY QUICK REFERENCE
+=============================
+
+Informative image
+→ meaningful alt text
+
+
+Decorative image
+→ alt=""
+
+
+Form control
+→ associated label
+
+
+Extra form instructions
+→ aria-describedby when appropriate
+
+
+Symbol-only control
+→ may need aria-label
+
+
+Visible heading naming a region
+→ may use aria-labelledby
+
+
+Decorative icon
+→ may use aria-hidden="true"
+
+
+Normal links/buttons/inputs
+→ rely on native keyboard behavior
+
+
+Video with meaningful audio
+→ captions
+
+
+Audio with spoken information
+→ transcript
+
+
+Poor link text
+→ replace with descriptive visible link text
+
+
+Table column header
+→ <th scope="col">
+
+
+Table row header
+→ <th scope="row">
+
+
+STATIC HTML VS PRESENTATION
+===========================
+
+HTML should primarily describe:
+
+STRUCTURE
++
+MEANING
+
+
+CSS should primarily control:
+
+APPEARANCE
++
+LAYOUT
+
+
+Avoid using semantic elements merely to create visual spacing.
+
+Examples to avoid:
+
+empty <p> elements for spacing
+
+repeated <br> elements for layout
+
+tables for general page layout
+
+
+NATIVE HTML FIRST
+=================
+
+One of the most important rules from the entire HTML curriculum:
+
+USE THE NATIVE ELEMENT THAT MATCHES THE JOB.
+
+
+Need a button?
+
+<button>
+
+
+Need navigation?
+
+<nav>
+
+
+Need a hyperlink?
+
+<a>
+
+
+Need an input label?
+
+<label>
+
+
+Need a table?
+
+<table>
+
+
+Need a heading?
+
+<h1> through <h6>
+
+
+Need a list?
+
+<ul> or <ol>
+
+
+Need primary content?
+
+<main>
+
+
+Only reach for additional ARIA when native HTML does not already
+communicate the required information.
+
+
+FINAL HTML CHECKLIST
+====================
+
+Before considering an HTML page complete, check:
+
+DOCUMENT
+
+- DOCTYPE exists
+- lang is set
+- charset is UTF-8
+- viewport metadata exists
+- useful title exists
+- useful description exists
+
+
+STRUCTURE
+
+- semantic elements used appropriately
+- one clear main content area
+- headings form a logical hierarchy
+- no unnecessary generic containers
+
+
+LINKS
+
+- destinations are correct
+- internal href fragments match IDs
+- link text is meaningful
+
+
+IMAGES
+
+- every image has appropriate alt handling
+- informative images have useful descriptions
+- decorative images use empty alt text
+
+
+FORMS
+
+- controls have labels
+- for/id relationships match
+- names exist where data must be submitted
+- appropriate input types are used
+- validation attributes match requirements
+- radio buttons are properly grouped
+- checkboxes have meaningful values
+- help text is properly associated when necessary
+
+
+TABLES
+
+- used only for tabular data
+- caption describes the table
+- table sections are appropriate
+- header cells use correct semantics
+- row/column relationships are clear
+
+
+ARIA
+
+- native HTML used first
+- ARIA is actually necessary
+- referenced IDs exist
+- accessible names are meaningful
+- aria-hidden does not remove important information
+
+
+MEDIA
+
+- native controls are available
+- video captions are provided when necessary
+- audio transcripts are available
+- fallback text exists where appropriate
+
+
+KEYBOARD
+
+- all interactive controls are reachable
+- tab order is logical
+- static text is not an unnecessary tab stop
+- positive tabindex values are avoided
+
+
+VALIDATION
+
+- HTML validator passes
+- accessibility audit performed
+- keyboard testing performed
+- DevTools inspection performed
+
+
+CORE HTML MENTAL MODEL
+======================
+
+HTML
+    ↓
+STRUCTURE + MEANING
+
+CSS
+    ↓
+PRESENTATION
+
+JavaScript
+    ↓
+BEHAVIOR
+
+
+ACCESSIBLE HTML
+===============
+
+Semantic HTML
+    +
+Logical headings
+    +
+Native controls
+    +
+Accessible names
+    +
+Accessible descriptions
+    +
+Text alternatives
+    +
+Keyboard support
+    +
+Appropriate ARIA
+    +
+Validation and testing
+
+
+FINAL KEY TAKEAWAY
+==================
+
+Good HTML is not simply markup that displays correctly in a browser.
+
+Good HTML communicates:
+
+- what the content is
+- how pieces of content relate to each other
+- what controls do
+- how users interact with them
+- what information should be available to assistive technology
+
+Start with semantic native HTML.
+
+Use attributes to establish meaningful relationships.
+
+Use ARIA only when native HTML does not already provide the semantics
+you need.
+
+Then validate, inspect, test with the keyboard, and audit accessibility
+before considering the page finished.

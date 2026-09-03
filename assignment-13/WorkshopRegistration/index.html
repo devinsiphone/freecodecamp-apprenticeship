@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A workshop registration page where attendees can sign up for an upcoming HTML workshop and provide their contact and topic information.">
+    <title>Workshop Registration</title>
+</head>
+
+<body>
+    <header>
+        <h1>Workshop Registration</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>Register below for our upcoming HTML workshop.</p>
+
+
+
+        <section id="registration">
+            <h2>Registration Form</h2>
+            <form action="https://example.com/register" method="get">
+
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="topic">Workshop Topic:</label>
+                <input type="text" id="topic" name="topic">
+
+                <label for="backup-topic">Workshop Backup Topic:</label>
+                <input type="text" id="backup-topic" name="backup-topic">
+
+                <input type="submit" value="Register">
+            </form>
+        </section>
+
+        <section id="schedule">
+            <h2>Workshop Schedule</h2>
+
+            <table>
+                <caption>Upcoming Workshops</caption>
+                <thead>
+
+                    <tr>
+                        <th>Workshop</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>HTML Foundations</td>
+                        <td>September 18, 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Workshop Photo</h2>
+
+            <img src="https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg"
+                alt="A vintage IBM desktop computer with a CRT monitor displaying text on the screen.">
+        </section>
+    </main>
+
+    <footer>
+        <p>Atlanta Web Skills Conference</p>
+    </footer>
+</body>
+
+</html>

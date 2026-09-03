@@ -1,0 +1,23 @@
+/* Descendant combinator */
+/* Set the color of every link anywhere inside <nav> */
+nav a {
+    color: darkgreen;
+}
+
+/* Child combinator */
+/* Set the color of the paragraph that is a direct child of <header> */
+header > p {
+    color: darkblue;
+}
+
+/* Adjacent sibling combinator */
+/* Set the color of the first paragraph immediately following every <h2> */
+h2 + p {
+    color: darkgreen;
+}
+
+/* Subsequent-sibling combinator */
+/* Set the width of each <ul> that occurs later in the same section after an <h2> */
+h2 ~ ul {
+    width: 300px;
+}

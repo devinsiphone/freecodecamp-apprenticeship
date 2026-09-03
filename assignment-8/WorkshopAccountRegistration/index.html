@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A registration page for Atlanta Web Skills Conference where attendees can create a workshop profile and share their contact information and learning interests.
+">
+    <title>Create Your Workshop Profile</title>
+</head>
+
+<body>
+    <header>
+        <h1>Create Your Workshop Profile</h1>
+    </header>
+    <main>
+        <p>
+            Create your workshop profile to help Atlanta Web Skills Conference better understand who is attending and
+            which web development topics learners are most interested in exploring. Your profile information will help
+            organizers plan future workshops and create learning opportunities that better match attendee interests.
+        </p>
+        <form action="https://example.com/workshop-profile" method="get">
+            <p>
+                <label for="fullname">Full Name: </label>
+                <input required type="text" id="fullname" name="fullname" placeholder="John Doe" />
+            </p>
+            <p>
+                <label for="email">Email: </label>
+                <input required type="email" id="email" name="email" placeholder="email@domain.com" />
+            </p>
+            <p>
+                <label for="displayname">Display Name: </label>
+                <input required type="text" id="displayname" name="displayname" placeholder="CodeLearner27"
+                    minlength="3" maxlength="20" />
+            </p>
+            <p>
+                <label for="city">City: </label>
+                <input type="text" id="city" name="city" placeholder="Atlanta" maxlength="30" />
+            </p>
+            <p>
+                <label for="topic">Workshop Topic: </label>
+                <input required type="text" id="topic" name="topic" placeholder="CSS Flexbox" minlength="3"
+                    maxlength="40" />
+            </p>
+            <p>
+                <input type="submit" value="Create Profile">
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p>Atlanta Web Skills Conference — Learn. Build. Share.</p>
+        <p><a href="https://freecodecamp.org">freecodecamp.org</a></p>
+    </footer>
+</body>
+
+</html>
