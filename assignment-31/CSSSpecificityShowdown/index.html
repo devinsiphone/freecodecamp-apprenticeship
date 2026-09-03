@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A CSS practice page demonstrating specificity and the cascade.">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        h1 {
+            color: darkgreen;
+        }
+
+        p {
+            color: darkred;
+        }
+    </style>
+
+    <title>CSS Specificity Showdown</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>CSS Specificity Showdown</h1>
+
+        <p class="intro">
+            This paragraph is styled by competing CSS selectors.
+        </p>
+
+        <p id="featured" class="intro">
+            This paragraph has both a class and an ID.
+        </p>
+
+        <p id="inline-winner" class="intro" style="color: darkorange;">
+            This paragraph also has an inline style.
+        </p>
+    </main>
+
+</body>
+
+</html>
