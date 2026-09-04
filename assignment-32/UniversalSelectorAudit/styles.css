@@ -1,0 +1,17 @@
+* {
+    font-family: Arial, sans-serif;
+    color: darkslategray;
+    margin: 10px;
+}
+
+p {
+    color: darkblue;
+}
+
+.notice {
+    color: darkgreen;
+}
+
+#important {
+    color: darkred;
+}
