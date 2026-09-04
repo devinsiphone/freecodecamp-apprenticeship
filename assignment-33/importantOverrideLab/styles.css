@@ -1,0 +1,20 @@
+p {
+    color: darkblue;
+}
+
+.message {
+    color: darkgreen;
+}
+
+/* This rule is tagged !important because it has a class of urgent */
+.urgent {
+    color: darkorange !important;
+}
+
+#standard-message {
+    color: darkred;
+}
+
+#urgent-message {
+    color: purple;
+}
