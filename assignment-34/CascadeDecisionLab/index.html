@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A CSS practice page demonstrating how the cascade algorithm chooses styles.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cascade Decision Lab</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Cascade Decision Lab</h1>
+
+        <section>
+            <h2>Origin</h2>
+            <a href="https://www.freecodecamp.org">Visit freeCodeCamp</a>
+        </section>
+
+        <section>
+            <h2>Specificity</h2>
+
+            <p id="featured-message" class="message">
+                This message has both a class and an ID.
+            </p>
+        </section>
+
+        <section>
+            <h2>Order of Appearance</h2>
+
+            <p class="status">
+                This rule has two selectors with equal specificity.
+            </p>
+        </section>
+
+        <section>
+            <h2>Importance</h2>
+
+            <p id="urgent-message" class="urgent">
+                This message demonstrates an important declaration.
+            </p>
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+.not-used {
+    color: pink;
+}
+
+a {
+    color: darkgreen;
+}
+
+p {
+    color: darkblue;
+}
+
+.message {
+    color: darkgreen;
+}
+
+#featured-message {
+    color: darkred;
+}
+
+.status {
+    color: purple;
+}
+
+.status {
+    color: teal;
+}
+
+#urgent-message {
+    color: crimson;
+}
+
+.urgent {
+    color: darkorange !important;
+}
