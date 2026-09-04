@@ -1,2 +1,1720 @@
-CSS Notes
+============================================================
+FREECODECAMP - BASIC CSS REVIEW NOTES
+============================================================
 
+
+============================================================
+1. CSS BASICS
+============================================================
+
+CSS = Cascading Style Sheets
+
+CSS is a stylesheet language used to control the presentation
+and appearance of HTML elements.
+
+CSS can control things such as:
+
+- colors
+- fonts
+- backgrounds
+- spacing
+- dimensions
+- layouts
+- alignment
+- visual presentation
+
+
+------------------------------------------------------------
+BASIC ANATOMY OF A CSS RULE
+------------------------------------------------------------
+
+A CSS rule normally contains:
+
+1. Selector
+2. Declaration block
+
+Example:
+
+p {
+    color: blue;
+}
+
+p
+= selector
+
+color
+= property
+
+blue
+= value
+
+color: blue;
+= declaration
+
+
+General syntax:
+
+selector {
+    property: value;
+}
+
+
+Multiple declarations:
+
+p {
+    color: blue;
+    font-size: 18px;
+}
+
+
+The selector determines WHAT gets styled.
+
+The declarations determine HOW it gets styled.
+
+
+============================================================
+2. META VIEWPORT
+============================================================
+
+A common viewport meta element is:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+It tells the browser how the page should be sized and scaled,
+especially on mobile devices.
+
+
+width=device-width
+
+Sets the viewport width to the width of the device.
+
+
+initial-scale=1.0
+
+Sets the initial zoom level.
+
+
+A typical HTML head might contain:
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Page Title</title>
+</head>
+
+
+============================================================
+3. DEFAULT BROWSER STYLES
+============================================================
+
+Browsers automatically apply default styles to HTML elements.
+
+These are often called:
+
+user-agent styles
+or
+user-agent stylesheet rules
+
+
+Examples:
+
+- headings have default font sizes
+- paragraphs have default margins
+- links are normally underlined
+- links normally have their own colors
+- lists normally have indentation
+- body may have a default margin
+
+
+Example:
+
+<h1>Hello</h1>
+
+Even without your own CSS, the browser makes the h1:
+
+- large
+- bold
+- block-level
+- spaced from surrounding content
+
+
+Your CSS can override browser defaults.
+
+
+============================================================
+4. INLINE, INTERNAL, AND EXTERNAL CSS
+============================================================
+
+
+------------------------------------------------------------
+INLINE CSS
+------------------------------------------------------------
+
+Inline CSS is written directly on an HTML element using
+the style attribute.
+
+Example:
+
+<p style="color: red;">Hello</p>
+
+
+Advantages:
+
+- useful for very small tests
+- applies directly to a specific element
+
+
+Disadvantages:
+
+- mixes HTML structure with presentation
+- difficult to maintain
+- difficult to reuse
+- usually avoided in larger projects
+
+
+------------------------------------------------------------
+INTERNAL CSS
+------------------------------------------------------------
+
+Internal CSS is written inside a style element,
+usually inside the HTML head.
+
+Example:
+
+<head>
+
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+
+</head>
+
+
+Useful for:
+
+- small demonstrations
+- single-page examples
+- quick experiments
+
+
+------------------------------------------------------------
+EXTERNAL CSS
+------------------------------------------------------------
+
+External CSS is stored in a separate .css file.
+
+Example file:
+
+styles.css
+
+
+HTML connects to it using:
+
+<link rel="stylesheet" href="styles.css">
+
+
+Example:
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+External stylesheets are normally preferred for projects
+because they provide better separation of concerns.
+
+HTML
+= structure and meaning
+
+CSS
+= presentation and styling
+
+
+IMPORTANT:
+
+Internal CSS is NOT automatically more specific than
+external CSS.
+
+Specificity comes primarily from selectors.
+
+If competing rules have equal specificity, source order
+can determine which declaration wins.
+
+
+============================================================
+5. WIDTH AND HEIGHT
+============================================================
+
+
+------------------------------------------------------------
+WIDTH
+------------------------------------------------------------
+
+width controls the width of an element.
+
+Example:
+
+div {
+    width: 300px;
+}
+
+
+If width is not explicitly set, its default value is:
+
+auto
+
+
+The browser determines the width based on factors such as:
+
+- content
+- containing element
+- display type
+
+
+------------------------------------------------------------
+MIN-WIDTH
+------------------------------------------------------------
+
+min-width establishes the smallest width an element
+should normally become.
+
+Example:
+
+div {
+    min-width: 200px;
+}
+
+
+------------------------------------------------------------
+MAX-WIDTH
+------------------------------------------------------------
+
+max-width establishes the largest width an element
+should normally become.
+
+Example:
+
+div {
+    max-width: 800px;
+}
+
+
+max-width is especially useful for keeping content from
+becoming excessively wide.
+
+Example:
+
+.container {
+    width: 80%;
+    max-width: 800px;
+}
+
+
+------------------------------------------------------------
+HEIGHT
+------------------------------------------------------------
+
+height controls an element's height.
+
+Example:
+
+div {
+    height: 200px;
+}
+
+
+The default height is generally:
+
+auto
+
+
+This allows the element to grow according to its content.
+
+
+------------------------------------------------------------
+MIN-HEIGHT
+------------------------------------------------------------
+
+Example:
+
+div {
+    min-height: 200px;
+}
+
+
+The element can become taller if necessary.
+
+
+------------------------------------------------------------
+MAX-HEIGHT
+------------------------------------------------------------
+
+Example:
+
+div {
+    max-height: 500px;
+}
+
+
+This limits how tall the element can normally become.
+
+
+============================================================
+6. CSS COMBINATORS
+============================================================
+
+Combinators select elements based on relationships
+between elements in the HTML structure.
+
+
+------------------------------------------------------------
+DESCENDANT COMBINATOR
+------------------------------------------------------------
+
+Syntax:
+
+A B
+
+
+Example:
+
+nav a {
+    color: green;
+}
+
+
+Meaning:
+
+Select every a element located somewhere inside nav.
+
+
+Example HTML:
+
+<nav>
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+    </ul>
+</nav>
+
+
+The link does NOT need to be a direct child of nav.
+
+It only needs to be a descendant.
+
+
+Think:
+
+"Find B somewhere inside A."
+
+
+------------------------------------------------------------
+CHILD COMBINATOR
+------------------------------------------------------------
+
+Symbol:
+
+>
+
+
+Syntax:
+
+A > B
+
+
+Example:
+
+section > p {
+    color: blue;
+}
+
+
+Meaning:
+
+Select p elements that are DIRECT children of section.
+
+
+Example:
+
+<section>
+
+    <p>This matches.</p>
+
+    <div>
+        <p>This does not match.</p>
+    </div>
+
+</section>
+
+
+The second paragraph is a descendant of section,
+but it is NOT a direct child.
+
+
+Think:
+
+"Find B immediately inside A."
+
+
+------------------------------------------------------------
+NEXT-SIBLING / ADJACENT-SIBLING COMBINATOR
+------------------------------------------------------------
+
+Symbol:
+
++
+
+
+Syntax:
+
+A + B
+
+
+Example:
+
+h2 + p {
+    color: red;
+}
+
+
+Meaning:
+
+Select a p element that immediately follows an h2
+and shares the same parent.
+
+
+Example:
+
+<h2>Heading</h2>
+<p>This matches.</p>
+<p>This does not match the h2 + p rule.</p>
+
+
+Only the first paragraph immediately following the h2
+matches.
+
+
+Think:
+
+"Find the B immediately after A."
+
+
+------------------------------------------------------------
+SUBSEQUENT-SIBLING COMBINATOR
+------------------------------------------------------------
+
+Symbol:
+
+~
+
+
+Syntax:
+
+A ~ B
+
+
+Example:
+
+h2 ~ p {
+    color: green;
+}
+
+
+Meaning:
+
+Select matching B elements that:
+
+- share the same parent as A
+- appear after A
+
+
+Example:
+
+<h2>Heading</h2>
+
+<p>This matches.</p>
+<div>Something else</div>
+<p>This also matches.</p>
+
+
+Both paragraphs occur after the h2 and share its parent.
+
+
+Think:
+
+"Find matching B siblings appearing later than A."
+
+
+============================================================
+7. INLINE, BLOCK, AND INLINE-BLOCK
+============================================================
+
+
+------------------------------------------------------------
+INLINE ELEMENTS
+------------------------------------------------------------
+
+Inline elements participate within a line of text.
+
+They normally:
+
+- do not start on a new line
+- use only the horizontal space they need
+- remain in the surrounding text flow
+
+
+Common examples:
+
+span
+a
+img
+
+
+Example:
+
+<p>
+    Hello <span>world</span> today.
+</p>
+
+
+The span stays inside the line.
+
+
+Normal width and height rules do not behave on ordinary
+inline elements the same way they do on block elements.
+
+
+------------------------------------------------------------
+BLOCK-LEVEL ELEMENTS
+------------------------------------------------------------
+
+Block-level elements normally:
+
+- start on a new line
+- take the available width by default
+- accept width and height
+
+
+Common examples:
+
+div
+p
+section
+
+
+Example:
+
+<div>First</div>
+<div>Second</div>
+
+
+The two div elements normally appear on separate lines.
+
+
+------------------------------------------------------------
+INLINE-BLOCK
+------------------------------------------------------------
+
+An element can be given:
+
+display: inline-block;
+
+
+Example:
+
+span {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+}
+
+
+inline-block combines useful characteristics of both
+inline and block behavior.
+
+
+INLINE:
+
+- stays within the line
+- width/height do not normally control it
+
+
+BLOCK:
+
+- starts on a new line
+- width/height work
+
+
+INLINE-BLOCK:
+
+- can remain beside other elements
+- width works
+- height works
+
+
+Quick comparison:
+
+INLINE
+Same line: YES
+Width/height: generally NO
+
+BLOCK
+Same line: NO
+Width/height: YES
+
+INLINE-BLOCK
+Same line: YES
+Width/height: YES
+
+
+============================================================
+8. MARGIN AND PADDING
+============================================================
+
+
+------------------------------------------------------------
+PADDING
+------------------------------------------------------------
+
+Padding is space INSIDE an element.
+
+It exists between:
+
+content
+and
+the element's edge/border
+
+
+Example:
+
+div {
+    padding: 20px;
+}
+
+
+Think:
+
+CONTENT
+↓
+PADDING
+↓
+EDGE / BORDER
+
+
+Padding pushes the content inward.
+
+
+------------------------------------------------------------
+MARGIN
+------------------------------------------------------------
+
+Margin is space OUTSIDE an element.
+
+It separates an element from surrounding elements.
+
+Example:
+
+div {
+    margin: 20px;
+}
+
+
+Think:
+
+MARGIN
+↓
+ELEMENT
+↓
+PADDING
+↓
+CONTENT
+
+
+Margin pushes surrounding elements away.
+
+
+IMPORTANT:
+
+Margin is generally NOT inherited.
+
+If a parent has:
+
+section {
+    margin: 30px;
+}
+
+its children move visually because they are inside the
+parent element.
+
+That does NOT mean the children inherited margin: 30px.
+
+
+============================================================
+9. MARGIN SHORTHAND
+============================================================
+
+
+ONE VALUE:
+
+margin: 20px;
+
+Means:
+
+top    = 20px
+right  = 20px
+bottom = 20px
+left   = 20px
+
+
+TWO VALUES:
+
+margin: 10px 20px;
+
+Means:
+
+top/bottom = 10px
+left/right = 20px
+
+
+THREE VALUES:
+
+margin: 10px 20px 30px;
+
+Means:
+
+top        = 10px
+left/right = 20px
+bottom     = 30px
+
+
+FOUR VALUES:
+
+margin: 10px 20px 30px 40px;
+
+Order:
+
+top
+right
+bottom
+left
+
+
+Mnemonic:
+
+TRBL
+
+Top
+Right
+Bottom
+Left
+
+
+============================================================
+10. PADDING SHORTHAND
+============================================================
+
+Padding follows the same shorthand pattern.
+
+
+ONE VALUE:
+
+padding: 20px;
+
+
+All four sides = 20px
+
+
+TWO VALUES:
+
+padding: 10px 20px;
+
+
+top/bottom = 10px
+left/right = 20px
+
+
+THREE VALUES:
+
+padding: 10px 20px 30px;
+
+
+top        = 10px
+left/right = 20px
+bottom     = 30px
+
+
+FOUR VALUES:
+
+padding: 10px 20px 30px 40px;
+
+
+top    = 10px
+right  = 20px
+bottom = 30px
+left   = 40px
+
+
+============================================================
+11. CSS SPECIFICITY
+============================================================
+
+Specificity helps determine which CSS declaration wins
+when multiple selectors target the same element/property.
+
+
+A useful specificity notation is:
+
+INLINE - ID - CLASS - TYPE
+
+
+Examples:
+
+Universal selector:
+
+*
+
+Specificity:
+
+0-0-0-0
+
+
+Type selector:
+
+p
+
+Specificity:
+
+0-0-0-1
+
+
+Class selector:
+
+.notice
+
+Specificity:
+
+0-0-1-0
+
+
+ID selector:
+
+#important
+
+Specificity:
+
+0-1-0-0
+
+
+Inline style:
+
+style="color: red;"
+
+Specificity:
+
+1-0-0-0
+
+
+Simplified ranking:
+
+*
+<
+type
+<
+class
+<
+ID
+<
+inline style
+
+
+============================================================
+12. UNIVERSAL SELECTOR
+============================================================
+
+The universal selector is:
+
+*
+
+
+Example:
+
+* {
+    font-family: Arial, sans-serif;
+}
+
+
+It matches every element.
+
+
+Its specificity contribution is:
+
+0-0-0-0
+
+
+This means it is very broad in what it matches,
+but very weak in specificity.
+
+
+Example:
+
+* {
+    color: gray;
+}
+
+p {
+    color: blue;
+}
+
+
+A paragraph becomes blue because the type selector has
+greater specificity.
+
+
+============================================================
+13. TYPE SELECTOR SPECIFICITY
+============================================================
+
+A type selector targets HTML elements by element name.
+
+Examples:
+
+p
+h1
+section
+a
+div
+
+
+Example:
+
+p {
+    color: blue;
+}
+
+
+Specificity:
+
+0-0-0-1
+
+
+Type selectors have more specificity than the universal
+selector but less than classes and IDs.
+
+
+============================================================
+14. CLASS SELECTOR SPECIFICITY
+============================================================
+
+Class selectors begin with:
+
+.
+
+
+Example:
+
+.notice {
+    color: green;
+}
+
+
+Specificity:
+
+0-0-1-0
+
+
+A class selector normally beats a type selector.
+
+
+Example:
+
+p {
+    color: blue;
+}
+
+.notice {
+    color: green;
+}
+
+
+HTML:
+
+<p class="notice">Message</p>
+
+
+Result:
+
+green
+
+
+============================================================
+15. ID SELECTOR SPECIFICITY
+============================================================
+
+ID selectors begin with:
+
+#
+
+
+Example:
+
+#important {
+    color: red;
+}
+
+
+Specificity:
+
+0-1-0-0
+
+
+An ID selector normally beats:
+
+- type selectors
+- class selectors
+
+
+Example:
+
+p {
+    color: blue;
+}
+
+.message {
+    color: green;
+}
+
+#featured {
+    color: red;
+}
+
+
+HTML:
+
+<p id="featured" class="message">Hello</p>
+
+
+Result:
+
+red
+
+
+============================================================
+16. INLINE STYLE SPECIFICITY
+============================================================
+
+Example:
+
+<p style="color: orange;">Hello</p>
+
+
+Inline styles are applied directly to the element.
+
+In the specificity model used here:
+
+1-0-0-0
+
+
+They normally override ordinary:
+
+- type selectors
+- class selectors
+- ID selectors
+
+
+Example:
+
+#message {
+    color: red;
+}
+
+
+<p id="message" style="color: orange;">Hello</p>
+
+
+Result:
+
+orange
+
+
+============================================================
+17. !IMPORTANT
+============================================================
+
+Example:
+
+.warning {
+    color: orange !important;
+}
+
+
+!important changes the priority of a declaration in
+the cascade.
+
+
+Example:
+
+#message {
+    color: purple;
+}
+
+.warning {
+    color: orange !important;
+}
+
+
+HTML:
+
+<p id="message" class="warning">Warning</p>
+
+
+Result:
+
+orange
+
+
+IMPORTANT CONCEPT:
+
+!important is NOT simply "extra specificity."
+
+It changes cascade priority.
+
+
+Best practice:
+
+Use !important sparingly.
+
+
+Avoid using it simply because:
+
+"My CSS isn't working."
+
+
+Instead investigate:
+
+- selector matching
+- specificity
+- cascade
+- source order
+- inheritance
+- DevTools
+
+
+Overusing !important can make CSS:
+
+- harder to understand
+- harder to override
+- harder to debug
+- harder to maintain
+
+
+============================================================
+18. THE CASCADE ALGORITHM
+============================================================
+
+The cascade determines which CSS declaration should
+apply when multiple declarations compete.
+
+
+A useful high-level mental model:
+
+1. RELEVANCE
+2. ORIGIN
+3. IMPORTANCE
+4. SPECIFICITY
+5. ORDER OF APPEARANCE
+
+
+------------------------------------------------------------
+1. RELEVANCE
+------------------------------------------------------------
+
+Does the rule even apply to the element?
+
+Example:
+
+.not-used {
+    color: pink;
+}
+
+
+If no element has class="not-used", the rule is irrelevant.
+
+
+------------------------------------------------------------
+2. ORIGIN
+------------------------------------------------------------
+
+CSS can come from different origins.
+
+Examples include:
+
+- browser/user-agent styles
+- author styles
+
+
+Browser example:
+
+Links receive default browser styling.
+
+
+Author example:
+
+a {
+    color: green;
+}
+
+
+Your author CSS can override normal browser defaults.
+
+
+------------------------------------------------------------
+3. IMPORTANCE
+------------------------------------------------------------
+
+Important declarations receive different cascade priority.
+
+Example:
+
+color: orange !important;
+
+
+------------------------------------------------------------
+4. SPECIFICITY
+------------------------------------------------------------
+
+If competing declarations are otherwise eligible,
+selector specificity can determine the winner.
+
+
+Example:
+
+p
+vs.
+.notice
+vs.
+#important
+
+
+Normally:
+
+ID > CLASS > TYPE
+
+
+------------------------------------------------------------
+5. ORDER OF APPEARANCE
+------------------------------------------------------------
+
+When competing declarations have equal priority
+and equal specificity, the later rule wins.
+
+
+Example:
+
+.status {
+    color: purple;
+}
+
+.status {
+    color: teal;
+}
+
+
+Result:
+
+teal
+
+
+Both selectors have identical specificity.
+
+The second declaration appears later.
+
+
+IMPORTANT:
+
+Internal CSS does not automatically beat external CSS
+because it has "more specificity."
+
+If two matching selectors have the same specificity,
+the cascade and source order may determine the winner.
+
+
+============================================================
+19. CSS INHERITANCE
+============================================================
+
+Inheritance allows certain CSS property values to pass
+from parent elements to descendants.
+
+
+Example:
+
+body {
+    font-family: Arial, sans-serif;
+    color: darkslategray;
+}
+
+
+Elements inside body can inherit:
+
+font-family
+color
+
+
+You do not need:
+
+h1 {
+    font-family: Arial;
+}
+
+p {
+    font-family: Arial;
+}
+
+a {
+    font-family: Arial;
+}
+
+
+when the property can naturally inherit from a parent.
+
+
+------------------------------------------------------------
+INHERITED PROPERTY EXAMPLE
+------------------------------------------------------------
+
+<section class="workshop">
+
+    <h2>Workshop</h2>
+
+    <p>Hello</p>
+
+</section>
+
+
+CSS:
+
+.workshop {
+    color: darkblue;
+}
+
+
+The h2 and p can inherit:
+
+darkblue
+
+
+------------------------------------------------------------
+DIRECT DECLARATION OVERRIDES INHERITANCE
+------------------------------------------------------------
+
+Example:
+
+.workshop {
+    color: darkblue;
+}
+
+.workshop a {
+    color: darkgreen;
+}
+
+
+The link receives darkgreen because it has its own
+matching declaration rather than simply using the
+inherited darkblue value.
+
+
+------------------------------------------------------------
+NOT ALL PROPERTIES INHERIT
+------------------------------------------------------------
+
+Commonly inherited properties include:
+
+color
+font-family
+
+
+Properties that generally do NOT inherit include:
+
+margin
+padding
+width
+height
+
+
+Example:
+
+.parent {
+    margin: 30px;
+}
+
+
+The children do not automatically receive:
+
+margin: 30px;
+
+
+The parent moves, and its children move with it because
+they are contained inside the parent.
+
+
+============================================================
+20. QUICK SPECIFICITY REFERENCE
+============================================================
+
+Universal:
+
+*
+
+0-0-0-0
+
+
+Type:
+
+p
+
+0-0-0-1
+
+
+Class:
+
+.notice
+
+0-0-1-0
+
+
+ID:
+
+#important
+
+0-1-0-0
+
+
+Inline:
+
+style="..."
+
+1-0-0-0
+
+
+Simplified order:
+
+*
+<
+type
+<
+class
+<
+ID
+<
+inline
+
+
+Remember:
+
+!important affects cascade priority rather than simply
+adding another specificity point.
+
+
+============================================================
+21. QUICK COMBINATOR REFERENCE
+============================================================
+
+DESCENDANT
+
+nav a
+
+A space B
+
+B anywhere inside A
+
+
+CHILD
+
+section > p
+
+A > B
+
+B is a direct child of A
+
+
+ADJACENT / NEXT SIBLING
+
+h2 + p
+
+A + B
+
+B immediately follows A
+
+
+SUBSEQUENT SIBLING
+
+h2 ~ p
+
+A ~ B
+
+matching B siblings occurring after A
+
+
+============================================================
+22. QUICK DISPLAY REFERENCE
+============================================================
+
+INLINE
+
+display: inline;
+
+- stays in text flow
+- normally does not start new line
+- width/height generally do not behave like block sizing
+
+
+BLOCK
+
+display: block;
+
+- starts on new line
+- accepts width
+- accepts height
+
+
+INLINE-BLOCK
+
+display: inline-block;
+
+- can stay beside other elements
+- accepts width
+- accepts height
+
+
+============================================================
+23. QUICK SPACING REFERENCE
+============================================================
+
+CONTENT
+↓
+PADDING
+↓
+BORDER / ELEMENT EDGE
+↓
+MARGIN
+↓
+SURROUNDING ELEMENTS
+
+
+Padding:
+
+space INSIDE
+
+
+Margin:
+
+space OUTSIDE
+
+
+============================================================
+24. DEBUGGING CSS
+============================================================
+
+When a CSS rule does not seem to work, check:
+
+1. Is the stylesheet linked correctly?
+
+<link rel="stylesheet" href="styles.css">
+
+
+2. Does the selector actually match the element?
+
+
+3. Is another rule more specific?
+
+
+4. Is !important involved?
+
+
+5. Is the value inherited?
+
+
+6. Is the property normally inherited?
+
+
+7. Does another rule appear later?
+
+
+8. Is the browser applying a default style?
+
+
+9. Inspect the element using DevTools.
+
+
+Useful DevTools information:
+
+- matched CSS rules
+- crossed-out declarations
+- computed styles
+- inherited styles
+- user-agent stylesheet
+- box model
+
+
+============================================================
+25. CORE BASIC CSS MENTAL MODEL
+============================================================
+
+HTML:
+
+"What is this content?"
+
+
+CSS:
+
+"How should this content look?"
+
+
+Selector:
+
+"What element am I targeting?"
+
+
+Property:
+
+"What characteristic am I changing?"
+
+
+Value:
+
+"What should that characteristic become?"
+
+
+Cascade:
+
+"Which competing declaration wins?"
+
+
+Specificity:
+
+"How strong is this selector compared with another?"
+
+
+Inheritance:
+
+"Does this value flow down from an ancestor?"
+
+
+Margin:
+
+"How much space should exist outside the box?"
+
+
+Padding:
+
+"How much space should exist inside the box?"
+
+
+============================================================
+END OF BASIC CSS REVIEW
+============================================================
