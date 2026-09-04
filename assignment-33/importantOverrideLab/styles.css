@@ -6,7 +6,7 @@ p {
     color: darkgreen;
 }
 
-/* This rule is tagged !important because it has a class of urgent */
+/* Uses !important to demonstrate overriding the more specific ID selector. */
 .urgent {
     color: darkorange !important;
 }
