@@ -1,0 +1,7 @@
+#margin-list li + li {
+    margin-top: 18px;
+}
+
+#line-height-list li {
+    line-height: 1.8;
+}
