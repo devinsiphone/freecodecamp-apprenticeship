@@ -1,0 +1,19 @@
+/* Targets the unordered list inside the id type-demo and sets its marker type to square */
+#type-demo ul {
+    list-style-type: square;
+}
+
+/* Targets the unordered list inside the id position-demo and sets list style position to inside */
+#position-demo ul {
+    list-style-position: inside;
+}
+
+/* Targets the unordered list inside the id image-demo and sets its marker type to the image of a gold star */
+#image-demo ul {
+    list-style-image: url(assets/star-marker.png);
+}
+
+/* Targets the ordered list inside the id shorthand-demo and sets its marker type to upper-roman and its list style position to inside */
+#shorthand-demo ol {
+    list-style: upper-roman inside;
+}
