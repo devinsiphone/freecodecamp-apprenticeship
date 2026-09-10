@@ -1,7 +1,9 @@
 /* This section demonstrates how a background image can fill an area while maintaining its proportions. */
 #cover-demo {
     background-image: url(assets/hero-background.png);
+    background-repeat: no-repeat;
     background-size: cover;
+    min-height: 1000px;
 }
 
 /* This section demonstrates a background image that repeats across the available space. */
