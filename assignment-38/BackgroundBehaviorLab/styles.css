@@ -1,0 +1,25 @@
+/* This section demonstrates how a background image can fill an area while maintaining its proportions. */
+#cover-demo {
+    background-image: url(assets/hero-background.png);
+    background-size: cover;
+}
+
+/* This section demonstrates a background image that repeats across the available space. */
+#repeat-demo {
+    background-image: url(assets/pattern.png);
+    background-repeat: repeat;
+}
+
+/* This section demonstrates controlling where a background image appears inside an element. */
+#position-demo {
+    background-image: url(assets/hero-background.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+/* This section demonstrates controlling a fixed background image relative to the viewport as the page scrolls. */
+#attachment-demo {
+    background-image: url(assets/hero-background.png);
+    background-attachment: fixed;
+    min-height: 1000px;
+}
