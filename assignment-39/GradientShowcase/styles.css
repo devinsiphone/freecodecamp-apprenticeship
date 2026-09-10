@@ -1,0 +1,23 @@
+/* This section uses a simple two-color linear gradient. */
+#basic-linear {
+    background-image: linear-gradient(pink, green);
+    min-height: 200px;
+}
+
+/* This section changes the direction of the color transition. */
+#direction-linear {
+    background-image: linear-gradient(to bottom right, lightblue, yellow);
+    min-height: 200px;
+}
+
+/* This section uses more than two colors in a single gradient. */
+#multi-stop {
+    background-image: linear-gradient(pink, lightblue 33%, yellow);
+    min-height: 200px;
+}
+
+/* This section demonstrates colors radiating outward from a central area. */
+#radial-demo {
+    background-image: radial-gradient(circle at center, lightgreen, pink);
+    min-height: 200px;
+}
