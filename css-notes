@@ -1718,3 +1718,1389 @@ Padding:
 ============================================================
 END OF BASIC CSS REVIEW
 ============================================================
+
+
+============================================================
+FREECODECAMP
+LISTS, LINKS, CSS BACKGROUNDS AND BORDERS REVIEW
+============================================================
+
+
+============================================================
+1. STYLING LISTS
+============================================================
+
+
+------------------------------------------------------------
+LINE-HEIGHT
+------------------------------------------------------------
+
+line-height controls the amount of vertical space between
+lines of text.
+
+Example:
+
+li {
+    line-height: 1.5;
+}
+
+
+Possible values include:
+
+normal
+numbers
+percentages
+length units
+
+
+Examples:
+
+line-height: normal;
+
+line-height: 1.5;
+
+line-height: 150%;
+
+line-height: 1.5em;
+
+
+IMPORTANT:
+
+line-height controls spacing BETWEEN LINES OF TEXT.
+
+It does not create external space around the element.
+
+
+------------------------------------------------------------
+MARGIN FOR LIST SPACING
+------------------------------------------------------------
+
+Margins can also be used to improve list readability.
+
+Example:
+
+li {
+    margin-bottom: 10px;
+}
+
+
+margin-bottom creates space OUTSIDE the list item.
+
+This means:
+
+line-height
+→ controls spacing between lines within text
+
+margin
+→ controls spacing around/between elements
+
+
+Example:
+
+li + li {
+    margin-top: 10px;
+}
+
+
+This adds space above every li that immediately follows
+another li.
+
+
+============================================================
+2. LIST-STYLE-TYPE
+============================================================
+
+list-style-type controls the marker shown beside a list item.
+
+
+Example:
+
+ul {
+    list-style-type: square;
+}
+
+
+Possible values include:
+
+disc
+circle
+square
+decimal
+
+
+Example:
+
+ul {
+    list-style-type: circle;
+}
+
+
+For an ordered list:
+
+ol {
+    list-style-type: decimal;
+}
+
+
+============================================================
+3. LIST-STYLE-POSITION
+============================================================
+
+list-style-position controls where the marker appears
+relative to the list item's content.
+
+
+Values:
+
+inside
+outside
+
+
+Example:
+
+ul {
+    list-style-position: inside;
+}
+
+
+OUTSIDE:
+
+The marker sits outside the main content box.
+
+This is the default behavior.
+
+
+INSIDE:
+
+The marker becomes part of the content flow.
+
+
+Example:
+
+ul {
+    list-style-position: inside;
+}
+
+
+This difference becomes easier to see when a list item
+wraps onto multiple lines.
+
+
+============================================================
+4. LIST-STYLE-IMAGE
+============================================================
+
+list-style-image lets you use an image as the list marker.
+
+
+Example:
+
+ul {
+    list-style-image: url("star.png");
+}
+
+
+The url() function points to the marker image.
+
+
+Example with a relative path:
+
+ul {
+    list-style-image: url("assets/star-marker.png");
+}
+
+
+IMPORTANT:
+
+The source image should generally already be an appropriate
+size for use as a list marker.
+
+
+============================================================
+5. LIST-STYLE SHORTHAND
+============================================================
+
+The list-style property is shorthand for several list
+properties.
+
+
+It can combine values such as:
+
+list-style-type
+list-style-position
+list-style-image
+
+
+Example:
+
+ol {
+    list-style: upper-roman inside;
+}
+
+
+Values in the shorthand are separated by spaces.
+
+
+============================================================
+6. STYLING LINKS
+============================================================
+
+A pseudo-class is added to a selector to style an element
+based on a particular state.
+
+
+Common link pseudo-classes:
+
+:link
+:visited
+:hover
+:focus
+:active
+
+
+============================================================
+7. :LINK
+============================================================
+
+:link targets links that the user has NOT visited.
+
+
+Example:
+
+a:link {
+    color: blue;
+}
+
+
+============================================================
+8. :VISITED
+============================================================
+
+:visited targets links that the user has already visited.
+
+
+Example:
+
+a:visited {
+    color: purple;
+}
+
+
+This gives users a visual indication that they have already
+visited a destination.
+
+
+============================================================
+9. :HOVER
+============================================================
+
+:hover applies while the pointer is positioned over
+an element.
+
+
+Example:
+
+a:hover {
+    color: green;
+}
+
+
+Hover styles help communicate that an element is
+interactive.
+
+
+============================================================
+10. :FOCUS
+============================================================
+
+:focus applies when an element receives keyboard or
+programmatic focus.
+
+
+Example:
+
+a:focus {
+    outline: 2px solid orange;
+}
+
+
+Focus styling is especially important for keyboard users.
+
+
+Do not remove a focus indicator unless you replace it with
+another clearly visible focus style.
+
+
+============================================================
+11. :ACTIVE
+============================================================
+
+:active applies while an element is being activated.
+
+
+For a link, this is commonly the brief period while the
+mouse button is being pressed.
+
+
+Example:
+
+a:active {
+    color: red;
+}
+
+
+============================================================
+12. COMMON LINK STATE ORDER
+============================================================
+
+A common ordering is:
+
+a:link
+a:visited
+a:hover
+a:focus
+a:active
+
+
+A commonly remembered sequence is:
+
+LVHA
+
+Link
+Visited
+Hover
+Active
+
+
+Focus is often included alongside the interactive states
+for keyboard accessibility.
+
+
+============================================================
+13. DEFAULT LINK STYLES
+============================================================
+
+Default browser link styles are useful because they help
+users recognize interactive text.
+
+
+Typical browser behavior includes:
+
+- different colors for visited/unvisited links
+- underlined links
+- visible focus indicators
+
+
+Custom styles are fine, but links should remain recognizable
+as interactive elements.
+
+
+============================================================
+14. BACKGROUND-IMAGE
+============================================================
+
+background-image applies an image to an element's
+background.
+
+
+Example:
+
+section {
+    background-image: url("background.jpg");
+}
+
+
+The image is painted behind the element's content.
+
+
+background-image can also accept generated images such as:
+
+linear-gradient()
+
+radial-gradient()
+
+
+Example:
+
+section {
+    background-image: linear-gradient(blue, white);
+}
+
+
+============================================================
+15. BACKGROUND-SIZE
+============================================================
+
+background-size controls the rendered size of a background
+image.
+
+
+Common values:
+
+cover
+contain
+auto
+length values
+percentage values
+
+
+------------------------------------------------------------
+COVER
+------------------------------------------------------------
+
+Example:
+
+section {
+    background-size: cover;
+}
+
+
+cover scales the image so the entire element is covered.
+
+The image keeps its aspect ratio.
+
+IMPORTANT:
+
+Part of the image may be CROPPED.
+
+
+Mental model:
+
+cover
+→ fill the entire container
+→ cropping may occur
+
+
+------------------------------------------------------------
+CONTAIN
+------------------------------------------------------------
+
+Example:
+
+section {
+    background-size: contain;
+}
+
+
+contain scales the image so the entire image fits inside
+the available area.
+
+The image keeps its aspect ratio.
+
+This may leave unused space in the container.
+
+
+Mental model:
+
+contain
+→ show the entire image
+→ empty space may remain
+
+
+------------------------------------------------------------
+AUTO
+------------------------------------------------------------
+
+Example:
+
+section {
+    background-size: auto;
+}
+
+
+auto uses the image's natural proportions.
+
+
+------------------------------------------------------------
+LENGTH / PERCENTAGE
+------------------------------------------------------------
+
+Examples:
+
+background-size: 300px;
+
+background-size: 100%;
+
+background-size: 100% 50%;
+
+
+These values explicitly control the dimensions used for
+the background.
+
+
+============================================================
+16. BACKGROUND-REPEAT
+============================================================
+
+background-repeat controls whether a background image
+tiles across an element.
+
+
+The default behavior is:
+
+repeat
+
+
+Example:
+
+section {
+    background-repeat: repeat;
+}
+
+
+This repeats the image horizontally and vertically.
+
+
+Other useful values include:
+
+no-repeat
+repeat-x
+repeat-y
+
+
+------------------------------------------------------------
+NO-REPEAT
+------------------------------------------------------------
+
+section {
+    background-repeat: no-repeat;
+}
+
+
+The image appears once.
+
+
+------------------------------------------------------------
+REPEAT-X
+------------------------------------------------------------
+
+section {
+    background-repeat: repeat-x;
+}
+
+
+Repeats horizontally.
+
+
+------------------------------------------------------------
+REPEAT-Y
+------------------------------------------------------------
+
+section {
+    background-repeat: repeat-y;
+}
+
+
+Repeats vertically.
+
+
+Small pattern images are often useful with repeat.
+
+Large photographs usually use no-repeat.
+
+
+============================================================
+17. BACKGROUND-POSITION
+============================================================
+
+background-position controls where a background image is
+placed inside its element.
+
+
+Keyword examples:
+
+top
+bottom
+left
+right
+center
+
+
+Example:
+
+section {
+    background-position: center;
+}
+
+
+Two values can control horizontal and vertical positioning.
+
+
+Example:
+
+section {
+    background-position: right center;
+}
+
+
+This means:
+
+horizontal = right
+vertical   = center
+
+
+Other examples:
+
+background-position: top left;
+
+background-position: center center;
+
+background-position: bottom right;
+
+
+Positions can also use:
+
+length values
+percentages
+
+
+============================================================
+18. BACKGROUND-ATTACHMENT
+============================================================
+
+background-attachment controls how the background behaves
+when scrolling.
+
+
+Important values:
+
+scroll
+fixed
+
+
+------------------------------------------------------------
+SCROLL
+------------------------------------------------------------
+
+background-attachment: scroll;
+
+
+This is the normal/default behavior.
+
+The background moves as the page scrolls.
+
+
+------------------------------------------------------------
+FIXED
+------------------------------------------------------------
+
+background-attachment: fixed;
+
+
+The background stays fixed relative to the viewport while
+the page content moves.
+
+
+Quick comparison:
+
+scroll
+→ background moves with the page
+
+fixed
+→ background stays fixed to the viewport
+
+
+============================================================
+19. BACKGROUND SHORTHAND
+============================================================
+
+background is a shorthand property that can combine several
+background properties.
+
+
+Instead of writing multiple declarations:
+
+background-image: url("image.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+
+
+some values can be combined:
+
+background: center fixed no-repeat url("image.jpg");
+
+
+IMPORTANT:
+
+Individual background properties are often easier to read
+while learning.
+
+The shorthand becomes useful once you understand what each
+individual property controls.
+
+
+============================================================
+20. BACKGROUND PROPERTIES - MENTAL MODEL
+============================================================
+
+background-image
+→ WHAT image is displayed
+
+
+background-size
+→ HOW LARGE the image is
+
+
+background-repeat
+→ WHETHER the image tiles
+
+
+background-position
+→ WHERE the image appears
+
+
+background-attachment
+→ HOW the image behaves while scrolling
+
+
+background
+→ shorthand that can combine background settings
+
+
+============================================================
+21. CSS GRADIENTS
+============================================================
+
+A gradient is a gradual transition between two or more
+colors.
+
+
+Two important CSS gradient functions are:
+
+linear-gradient()
+
+radial-gradient()
+
+
+Gradients are generated by CSS.
+
+You do NOT need a separate image file.
+
+
+============================================================
+22. LINEAR-GRADIENT()
+============================================================
+
+A linear gradient transitions colors along a straight line.
+
+
+Basic example:
+
+section {
+    background-image: linear-gradient(blue, white);
+}
+
+
+This creates a transition between blue and white.
+
+
+------------------------------------------------------------
+GRADIENT DIRECTION
+------------------------------------------------------------
+
+You can control the direction.
+
+
+Example:
+
+linear-gradient(to right, blue, white);
+
+
+Other examples:
+
+to left
+
+to bottom
+
+to top
+
+to bottom right
+
+
+You can also use angles.
+
+
+Example:
+
+linear-gradient(45deg, blue, white);
+
+
+Mental model:
+
+linear-gradient()
+→ colors transition along a line
+
+
+============================================================
+23. COLOR STOPS
+============================================================
+
+A gradient can contain more than two colors.
+
+
+Example:
+
+linear-gradient(red, yellow, green);
+
+
+You can also control where a color occurs.
+
+
+Example:
+
+linear-gradient(red, yellow 40%, green);
+
+
+The percentage is a COLOR STOP.
+
+
+Color stops give you more precise control over where
+transitions occur.
+
+
+Mental model:
+
+colors
++
+positions
+=
+gradient appearance
+
+
+============================================================
+24. RADIAL-GRADIENT()
+============================================================
+
+A radial gradient expands outward from a point.
+
+
+Example:
+
+section {
+    background-image: radial-gradient(white, blue);
+}
+
+
+It can radiate in circular or elliptical shapes.
+
+
+Example:
+
+radial-gradient(circle, white, blue);
+
+
+Mental model:
+
+linear-gradient()
+→ transition follows a line
+
+
+radial-gradient()
+→ transition expands outward from a point
+
+
+============================================================
+25. BACKGROUND ACCESSIBILITY
+============================================================
+
+Background design affects readability and accessibility.
+
+
+The foreground content must remain easy to distinguish
+from the background.
+
+
+This is especially important when text appears over:
+
+- photographs
+- gradients
+- patterns
+- strong colors
+
+
+============================================================
+26. COLOR CONTRAST
+============================================================
+
+Foreground text and its background need sufficient
+contrast.
+
+
+WCAG contrast guidance covered in the review:
+
+Normal text:
+
+minimum contrast ratio = 4.5:1
+
+
+Large text:
+
+minimum contrast ratio = 3:1
+
+
+Low contrast can make text difficult or impossible to read
+for many users.
+
+
+============================================================
+27. TEXT OVER BACKGROUND IMAGES
+============================================================
+
+Background photographs can contain both light and dark areas.
+
+This can make one text color readable in one area but
+unreadable in another.
+
+
+Possible solutions include:
+
+- choosing a less visually busy image
+- choosing better foreground/background colors
+- positioning text over a clearer part of the image
+- placing a solid or semi-transparent layer behind text
+- avoiding unnecessary background images altogether
+
+
+Main principle:
+
+The background should support the content.
+
+It should not interfere with readability.
+
+
+============================================================
+28. ESSENTIAL INFORMATION AND BACKGROUNDS
+============================================================
+
+Background images are primarily presentational.
+
+Do not rely on a decorative background alone to communicate
+important information that users need to understand the
+page.
+
+
+Essential information should normally be represented in
+the actual page content.
+
+
+============================================================
+29. BORDERS
+============================================================
+
+Borders create a visible boundary around an element.
+
+
+A border commonly has three characteristics:
+
+width
+style
+color
+
+
+Example:
+
+border: 3px solid blue;
+
+
+Meaning:
+
+3px
+→ width
+
+solid
+→ style
+
+blue
+→ color
+
+
+============================================================
+30. BORDER SHORTHAND
+============================================================
+
+border is shorthand for the border's:
+
+width
+style
+color
+
+
+Example:
+
+img {
+    border: 3px solid blue;
+}
+
+
+General form:
+
+border: WIDTH STYLE COLOR;
+
+
+============================================================
+31. INDIVIDUAL BORDER SIDES
+============================================================
+
+Each side can be styled independently.
+
+
+Properties:
+
+border-top
+border-right
+border-bottom
+border-left
+
+
+Examples:
+
+img {
+    border-top: 3px solid blue;
+    border-right: 2px solid red;
+    border-bottom: 4px dashed green;
+    border-left: 1px dotted orange;
+}
+
+
+Each side can have a different:
+
+width
+style
+color
+
+
+============================================================
+32. BORDER-STYLE
+============================================================
+
+border-style determines the visual appearance of the border.
+
+
+Common values include:
+
+solid
+dashed
+dotted
+double
+
+
+Examples:
+
+border-style: solid;
+
+border-style: dashed;
+
+border-style: dotted;
+
+border-style: double;
+
+
+A visible border generally needs a border style other than
+none.
+
+
+============================================================
+33. BORDER-RADIUS
+============================================================
+
+border-radius rounds an element's corners.
+
+
+Example:
+
+img {
+    border: 3px solid darkgreen;
+    border-radius: 15px;
+}
+
+
+Larger values produce more rounded corners.
+
+
+Example:
+
+border-radius: 25px;
+
+
+border-radius can be used on many elements, including:
+
+images
+cards
+buttons
+containers
+
+
+============================================================
+34. BORDER VS OUTLINE
+============================================================
+
+A border participates in the element's box.
+
+An outline is drawn around the outside of the element and
+does not change the element's box dimensions.
+
+
+Example:
+
+img {
+    border: 3px solid blue;
+}
+
+
+Example:
+
+img {
+    outline: 3px solid blue;
+}
+
+
+Mental model:
+
+border
+→ part of the box
+
+
+outline
+→ drawn around the box
+
+
+Outline is also commonly used to create visible focus
+indicators for interactive elements.
+
+
+============================================================
+35. BACKGROUND VS CONTENT IMAGE
+============================================================
+
+A CSS background image is decorative/presentational.
+
+Example:
+
+section {
+    background-image: url("mountains.jpg");
+}
+
+
+An HTML img element represents actual page content.
+
+Example:
+
+<img src="mountains.jpg"
+     alt="Snow-covered mountains beneath a cloudy sky">
+
+
+Use the approach appropriate to the purpose of the image.
+
+
+============================================================
+36. QUICK BACKGROUND REFERENCE
+============================================================
+
+background-image
+→ chooses the image
+
+
+background-size: cover
+→ fills the element; image may crop
+
+
+background-size: contain
+→ fits whole image; empty space may remain
+
+
+background-repeat: repeat
+→ tiles image
+
+
+background-repeat: no-repeat
+→ displays image once
+
+
+background-position
+→ controls alignment/location
+
+
+background-attachment: scroll
+→ background scrolls normally
+
+
+background-attachment: fixed
+→ background remains fixed to viewport
+
+
+background
+→ shorthand
+
+
+============================================================
+37. QUICK BORDER REFERENCE
+============================================================
+
+border: 3px solid blue;
+
+→ width + style + color
+
+
+border-top
+→ top side
+
+
+border-right
+→ right side
+
+
+border-bottom
+→ bottom side
+
+
+border-left
+→ left side
+
+
+border-style
+→ solid / dashed / dotted / double
+
+
+border-radius
+→ rounded corners
+
+
+outline
+→ line drawn outside the border without changing box size
+
+
+============================================================
+38. QUICK GRADIENT REFERENCE
+============================================================
+
+Two-color linear gradient:
+
+linear-gradient(blue, white)
+
+
+Directional linear gradient:
+
+linear-gradient(to right, blue, white)
+
+
+Angled linear gradient:
+
+linear-gradient(45deg, blue, white)
+
+
+Multiple colors:
+
+linear-gradient(red, yellow, green)
+
+
+Color stop:
+
+linear-gradient(red, yellow 40%, green)
+
+
+Radial gradient:
+
+radial-gradient(white, blue)
+
+
+Circular radial gradient:
+
+radial-gradient(circle, white, blue)
+
+
+============================================================
+39. DEBUGGING CHECKLIST
+============================================================
+
+If a background image is not behaving as expected, check:
+
+1. Is the image path correct?
+
+2. Is background-repeat causing unexpected copies?
+
+3. Is background-size set appropriately?
+
+4. Is background-position placing the image somewhere
+   unexpected?
+
+5. Is the element tall/wide enough to display the image?
+
+6. Is another CSS rule overriding the background property?
+
+
+If a border is not visible, check:
+
+1. Does it have a width?
+
+2. Does it have a visible style such as solid?
+
+3. Does it have a visible color?
+
+4. Is another rule overriding it?
+
+
+============================================================
+40. CORE MENTAL MODEL
+============================================================
+
+BACKGROUNDS
+
+image
+→ what appears behind the content
+
+size
+→ how large it appears
+
+repeat
+→ whether it tiles
+
+position
+→ where it appears
+
+attachment
+→ how it behaves during scrolling
+
+
+GRADIENTS
+
+linear
+→ transition along a line
+
+radial
+→ transition outward from a point
+
+color stops
+→ control where colors appear
+
+
+BORDERS
+
+width
+→ thickness
+
+style
+→ solid / dashed / dotted / double
+
+color
+→ border color
+
+radius
+→ corner roundness
+
+
+ACCESSIBILITY
+
+background + foreground
+→ must remain readable
+
+normal text
+→ at least 4.5:1 contrast
+
+large text
+→ at least 3:1 contrast
+
+
+============================================================
+END OF REVIEW
+============================================================
