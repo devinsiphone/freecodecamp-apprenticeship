@@ -1,0 +1,27 @@
+img {
+    width: 320px;
+}
+
+/* This rule demonstrates the border shorthand property. */
+#shorthand-demo img {
+    border: 3px solid red;
+}
+
+/* This rule demonstrates independently styling different sides of a border. */
+#side-demo img {
+    border-top: 3px solid red;
+    border-right: 3px solid yellow;
+    border-left: 3px solid yellow;
+    border-bottom: 3px solid green;
+}
+
+/* This rule demonstrates an outline drawn around an element. */
+#outline-demo img {
+    outline: 3px solid blueviolet;
+}
+
+/* This rule demonstrates rounded corners using border-radius. */
+#radius-demo img {
+    border: 3px solid blue;
+    border-radius: 15px;
+}
