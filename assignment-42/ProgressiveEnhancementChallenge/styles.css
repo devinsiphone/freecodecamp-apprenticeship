@@ -64,22 +64,27 @@ li {
 }
 
 .registration a {
-    display: inline-block;
+    display: block;
+    width: 200px;
     background: #F8FF4F;
     background: linear-gradient(180deg, rgba(248, 255, 79, 1) 0%, rgba(254, 204, 76, 1) 100%);
-    margin: 10px;
+    margin: 20px auto;
     padding: 10px;
     border: 3px solid #FECC4C;
     border-radius: 10px;
     color: #0b0a24;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .registration a:hover {
-    color: #FF554F;
+    color: #73221F;
+    border: 3px solid #73221F;
 }
 
 .registration a:focus {
-    color: #FF554F;
+    color: #73221F;
+    border: 3px solid #73221F;
 }
 
 footer {
