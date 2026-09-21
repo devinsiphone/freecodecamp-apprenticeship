@@ -63,18 +63,17 @@ p {
 }
 
 .card a:hover {
-    color: #DDDDDD;
-    border: 3px solid #DDDDDD;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
 }
 
 .card a:focus {
-    color: #DDDDDD;
-    border: 3px solid #DDDDDD;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
 }
 
 .card a:active {
-    color: #ffffff;
-    border: 3px solid #ffffff;
+    outline: 9px solid #FFFFFF;
 }
 
 footer {
@@ -94,15 +93,15 @@ footer a {
 }
 
 footer a:hover {
-    color: #DDDDDD;
+    color: #FFFFFF;
 }
 
 footer a:focus {
-    color: #DDDDDD;
+    color: #FFFFFF;
 }
 
 footer a:active {
-    color: #ffffff;
+    text-decoration: underline;
 }
 
 /* How did you establish hierachy within each card?
@@ -112,5 +111,5 @@ How did you keep the three cards visually consistent?
 The cards are kept visually consistent by using the same font, font color, font size, iconography, and color palette for each card.
 
 Why do the cards remain understandable without CSS?
-The cards remain understandable without CSS because the course names are still headings, the course levels are still readable, font sizes differentiating heirarchy in headings, the iconography remains present without CSS, the course descriptions are easily readable, the Explore More links remain clickable links, and the source order remains logical.
+The cards remain understandable without CSS because the course names are still headings, the course levels are still readable, the iconography remains present without CSS, the course descriptions are easily readable, the Explore More links remain clickable links, and the source order remains logical.
 */
