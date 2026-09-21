@@ -63,17 +63,17 @@ p {
 }
 
 .card a:hover {
-    color: #FFFFFF;
-    border: 3px solid #FFFFFF;
+    color: #001E44;
+    border: 3px solid #001E44;
 }
 
 .card a:focus {
-    color: #FFFFFF;
-    border: 3px solid #FFFFFF;
+    color: #001E44;
+    border: 3px solid #001E44;
 }
 
 .card a:active {
-    outline: 9px solid #FFFFFF;
+    outline: 3px solid #FFFFFF;
 }
 
 footer {
