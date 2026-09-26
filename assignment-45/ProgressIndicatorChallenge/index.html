@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Complete your CodePath Learning Center profile as part of a four-step registration process with clear progress guidance and accessible form controls.">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <title>Complete Your Registration</title>
 </head>
 
@@ -22,7 +22,7 @@
     <main class="main-content">
         <form id="multiStepForm">
             <div class="form-progress">
-                <label class="progress-label">Form progress</label>
+                <h2>Form progress</h2>
                 <ol>
                     <li class="account">Account (completed)</li>
                     <li class="profile">Profile (current)</li>
@@ -38,16 +38,16 @@
 
             <fieldset class="form-step active">
                 <legend>Profile Information</legend>
-                <label for="firstname">First Name: </label>
+                <label for="firstname">* First Name: </label>
                 <input type="text" id="firstname" name="firstname" placeholder="FirstName" required>
 
-                <label for="lastname">Last Name: </label>
+                <label for="lastname">* Last Name: </label>
                 <input type="text" id="lastname" name="lastname" placeholder="LastName" required>
 
-                <label for="email">Email Address: </label>
+                <label for="email">* Email Address: </label>
                 <input type="email" id="email" name="email" placeholder="name@example.com" required>
 
-                <label for="primaryrole">Primary Role: </label>
+                <label for="primaryrole">* Primary Role: </label>
                 <select name="primaryrole" id="primaryrole" required>
                     <option value="student">Student</option>
                     <option value="developer">Developer</option>

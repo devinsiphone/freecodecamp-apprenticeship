@@ -14,6 +14,13 @@ h1 {
     margin-bottom: 5px;
 }
 
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 p {
     text-align: center;
     line-height: 1.5;
@@ -24,14 +31,6 @@ p {
     padding: 11px;
     border: 3px solid #dcdef0;
     border-radius: 20px;
-}
-
-.progress-label {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 ol {
@@ -47,18 +46,18 @@ li {
 }
 
 .account {
-    background-color: #4caf50;
+    background-color: #1F5021;
     color: #fefefe;
-    outline: 3px solid #4caf50;
+    outline: 3px solid #1F5021;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
 
 .profile {
-    background-color: #4caf50;
+    background-color: #1F5021;
     color: #fefefe;
     font-weight: bold;
-    outline: 3px solid #4caf50;
+    outline: 3px solid #1F5021;
 }
 
 .preferences {
@@ -81,8 +80,8 @@ li {
     margin-right: auto;
     border: 1px solid #dcdef0;
     border-radius: 6px;
-    background: #4CAF50;
-    background: linear-gradient(90deg, rgba(76, 175, 80, 1) 50%, rgba(220, 222, 240, 1) 50%);
+    background: #1F5021;
+    background: linear-gradient(90deg, #1F5021 50%, rgba(220, 222, 240, 1) 50%);
     font-weight: bold;
 }
 
@@ -104,7 +103,7 @@ label {
 #email {
     display: inline-block;
     margin-bottom: 10px;
-    width: 70%;
+    width: 68%;
 }
 
 #primaryrole,
@@ -113,7 +112,7 @@ label {
 }
 
 .continue-btn {
-    background-color: #4caf50;
+    background-color: #1F5021;
     color: #fefefe;
     padding: 10px 18px;
     font-size: 14px;
@@ -125,7 +124,7 @@ label {
 
 .continue-btn:hover,
 .continue-btn:focus {
-    background-color: #45a049;
+    background-color: #030d3e;
 }
 
 .continue-btn:active {
@@ -144,3 +143,18 @@ footer a:focus {
 footer a:active {
     color: #fac827;
 }
+
+/* 
+
+How are completed/current/upcoming states distinguished without relying only on color?
+These states are distinguished by telling the user using status words what steps are completed,
+what is the current step, and what are the upcoming steps left to complete.
+
+How does the progress indicator remain subordinate to the form/page heading?
+The progress indicator is minor to the form/page heading by being under it, and smaller than the heading.
+
+Did all four user tests succeed and what would you improve if a user became confused?
+Yes, all four user tests did succeed.  Based upon what a user became confused about would determine
+what discovery would proceed to assist with the workflow.
+
+*/
