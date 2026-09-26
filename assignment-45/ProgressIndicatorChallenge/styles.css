@@ -162,7 +162,7 @@ How does the progress indicator remain subordinate to the form/page heading?
 The progress indicator is minor to the form/page heading by being under it, and smaller than the heading.
 
 Did all four user tests succeed and what would you improve if a user became confused?
-Yes, all four user tests did succeed.  Based upon what a user became confused about would determine
-what discovery would proceed to assist with the workflow.
+Yes, all four user tests did succeed.  If a user misunderstood required fields, I would replace the
+asterisk convention with (required) directly in each label.
 
 */
