@@ -1,0 +1,168 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fefefe;
+    color: #030d3e;
+    width: 520px;
+    max-width: 99%;
+    margin: 20px auto 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.main-content {
+    margin: 10px;
+    padding: 11px;
+    border: 3px solid #dcdef0;
+    border-radius: 20px;
+}
+
+ol {
+    margin: 20px;
+}
+
+li {
+    display: inline-block;
+    margin: 0px;
+    font-size: 14px;
+    width: 90px;
+    text-align: center;
+}
+
+.account {
+    background-color: #1F5021;
+    color: #fefefe;
+    outline: 3px solid #1F5021;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.profile {
+    background-color: #1F5021;
+    color: #fefefe;
+    font-weight: bold;
+    outline: 3px solid #1F5021;
+}
+
+.preferences {
+    background-color: #dcdef0;
+    outline: 3px solid #dcdef0;
+}
+
+.review {
+    background-color: #dcdef0;
+    outline: 3px solid #dcdef0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.progress-text {
+    text-align: left;
+    margin: 20px;
+    padding-left: 20px;
+    transform: translateX(10px);
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #dcdef0;
+    border-radius: 6px;
+    background: #1F5021;
+    background: linear-gradient(90deg, #1F5021 50%, rgba(220, 222, 240, 1) 50%);
+    color: #fefefe;
+    font-weight: bold;
+}
+
+fieldset p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.form-step legend {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#firstname,
+#lastname,
+#email {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 68%;
+}
+
+#primaryrole,
+#updates {
+    margin-bottom: 20px;
+}
+
+.continue-btn {
+    background-color: #1F5021;
+    color: #fefefe;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.continue-btn:hover,
+.continue-btn:focus {
+    background-color: #030d3e;
+}
+
+.continue-btn:active {
+    outline: 1px solid #1b3e8f;
+}
+
+footer a {
+    color: #030d3e;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #AB1D31;
+}
+
+footer a:active {
+    color: #6C550B;
+}
+
+/* 
+
+How are completed/current/upcoming states distinguished without relying only on color?
+These states are distinguished by telling the user using status words what steps are completed,
+what is the current step, and what are the upcoming steps left to complete.
+
+How does the progress indicator remain subordinate to the form/page heading?
+The progress indicator is minor to the form/page heading by being under it, and smaller than the heading.
+
+Did all four user tests succeed and what would you improve if a user became confused?
+Yes, all four user tests did succeed.  If a user misunderstood required fields, I would replace the
+asterisk convention with (required) directly in each label.
+
+*/
