@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-    text-align: leftß;
+    text-align: left;
     font-size: 3em;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -36,6 +36,15 @@ h1 {
 p {
     text-align: left;
     line-height: 1.5;
+}
+
+span.item-name {
+    font-weight: bold;
+}
+
+p.short-description,
+p.item-total {
+    margin: 0px;
 }
 
 h2 {
@@ -47,6 +56,13 @@ h2 {
 li {
     list-style: none;
     line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+img {
+    display: block;
+    width: 100px;
+    height: 100px;
 }
 
 .item-name {
@@ -56,8 +72,7 @@ li {
 
 .unit-price {
     float: right;
-    font-size: 0.9em;
-    text-align: right;
+    font-size: 1em;
 }
 
 .quantity-input {
@@ -124,7 +139,7 @@ a.continue-btn {
 a.checkout-btn:hover,
 a.continue-btn:hover,
 a.checkout-btn:focus,
-a.checkout-btn:hover {
+a.checkout-btn:focus {
     background-color: var(--dark-container);
 }
 
@@ -150,3 +165,24 @@ footer a:focus {
 footer a:active {
     color: var(--text);
 }
+
+/* 
+How did you make the final total easy to find
+without overpowering the page?
+
+The final total is located at the bottom of the page above the footer.  It is in the same font and color as the rest of the page with a heavier font weight added to it to distinguish
+it from the rest of the Order Summary.
+
+How did you distinguish Proceed to Checkout
+from Continue Shopping?
+
+The "Proceed to Checkout" button font is weighted heavier than the "Continue Shopping" button.  It is also located above the "Continue Shopping" button as it has a higher importance.
+
+Did all four user tests succeed?
+What one specific improvement would you test
+if users became confused? 
+
+Yes, all four user tests succeeded.  I would decrease the width of the "short description" text.  Longer descriptions can run below the item cost text and may cause some visual
+confusion.
+
+*/
