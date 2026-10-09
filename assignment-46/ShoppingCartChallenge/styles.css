@@ -139,7 +139,7 @@ a.continue-btn {
 a.checkout-btn:hover,
 a.continue-btn:hover,
 a.checkout-btn:focus,
-a.checkout-btn:focus {
+a.continue-btn:focus {
     background-color: var(--dark-container);
 }
 
